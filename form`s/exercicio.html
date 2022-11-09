@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                line-height: 2.5em;
+            }
+        </style>
+        <title>Primeiro Formulário</title>
+    </head>
+    <body>
+        <h1>Cadastro da Liga dos Astronautas</h1>
+        <form action="">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="name">Nome: </label>
+                    <input type="text" name="name" id="name" required placeholder="Seu Nome Aqui"><br>
+                <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required placeholder="Exemplo@exemplo.com">
+                <label for="senha"> - Password: </label>
+                    <input type="password" name="senha"  required id="senha" placeholder="Senha"><br>
+                <label for="nascimento">Data de Nascimento: </label>
+                    <input type="date" name="nascimento" id="nascimento" required>
+                <label for="foto"> - Foto: </label>
+                    <input type="file" name="foto" id="foto" accept=".png, .jpeg, .jpg" title="Sua foto De Perfil"><br>
+                <label for="nacionalidade">Nacionalidade: </label>
+                    <select name="nacionalidade" id="nacionalidade" required>
+                        <option value="BR">Brasileiro</option>
+                        <option value="RS">Russo</option>
+                        <option value="AF">Africano</option>
+                        <option value="EU">Europeu</option>
+                        <option value="AM">Americano</option>
+                        <option value="MX">Mexicano</option>
+                    </select>
+                <label for="genero"> - Gênero: </label>
+                    <input type="radio" name="genero" id="genero" checked>Masculino
+                    <input type="radio" name="genero" id="genero"> Ferminino <br>
+                <label for="qualidades">Suas Principais Qualidades: <br>
+                    Inteligência <input type="checkbox" name="qualidades" id="inteligencia" checked> |
+                    Resiliência <input type="checkbox" name="resiliencia" id="resiliencia"> |
+                    Preparo Físico <input type="checkbox" name="fisico" id="fisico"> |
+                    Educação <input type="checkbox" name="educacao" id="educacao"> |<br>
+                <textarea name="pergunta" id="pergunta" cols="50" rows="10" required placeholder="Porque você gostaria de ser um Astronauta?"></textarea><br>
+                <input type="submit" value="Criar">
+            </fieldset>
+
+        </form>
+    </body>
+</html>
