@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                line-height: 2.5em;
+            }
+        </style>
+        <title>Contate-nos</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"><img src="_imagens/logo.png" alt="Logo da Space X"></a>
+                <a href="naves.html"> | Naves |</a>
+                <a href="contato.html">Contate-nos</a>
+            </nav>
+            <hr>
+        </header>
+
+        <section>
+            <h1>Contate-nos Agora</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <form action="">
+                <label for="name"> Seu nome: </label>
+                    <input type="text" name="name" id="name" required placeholder="Seu Nome Aqui">
+                <label for="email"> - Email: </label>
+                    <input type="email" name="email" id="email" required placeholder="Seu melhor Email" title="Exemplo@exemplo.com"><br>
+                <label for="nave">Nave: </label>
+                    <select name="nave" id="nave">
+                        <option value="f-9">Falcon 9</option>
+                        <option value="f-heavy">Falcon Heavy</option>
+                    </select>
+                <label for="serviço"> Tipo de Serviço: </label>
+                    <input type="text" name="servico" id="serviço" required placeholder="Selecione o tipo de Serviço" list="serviços">
+                    <datalist id="serviços">
+                        <option value="Lorem ipsum dolor sit amet consectetur adipisicing elit."></option>
+                        <option value="Lorem ipsum . Reiciendis adipisci totam autem ullam facilis maxime laudantium."></option>
+                        <option value="orem ipsum atque dolor molestias suscipit itaque ratione earum velit exercitationem, porro dolorem hic aliquam!">L</option>
+                    </datalist>
+                    <br>
+                <input type="submit" value="Enviar Mensagem">
+            </form>
+        </section>
+    </body>
+</html>
