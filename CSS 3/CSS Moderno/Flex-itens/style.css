@@ -18,10 +18,11 @@ body {
     gap: 10px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .item {
-    /*width: 200px;*/ /*Substituido pelo FLEX-BASIS*/
+    width: 100%; /*Substituido pelo FLEX-BASIS*/
     height: 200px;
     border: 1px solid black;
     margin-bottom: 5px;
@@ -32,15 +33,13 @@ body {
     flex-basis: 200px;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-
 }
 
 .item1 {
     
 }
 .item2 {
-
+    
 }
 .item3 {
 
