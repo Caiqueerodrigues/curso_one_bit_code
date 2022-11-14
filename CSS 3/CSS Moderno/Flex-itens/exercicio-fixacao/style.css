@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+}
+
+body {
+    background-color: grey;
+}
+
+#header, #footer {
+    width: 100vw;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#itens {
+    display: flex;
+    height: 87vh;
+    flex: 1 0 430px;
+    padding: 10px;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+.item {
+    display: flex;
+    font-size: 2em;
+    height: 250px;
+    border: 1px solid black;
+    flex: 0 0 350px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
