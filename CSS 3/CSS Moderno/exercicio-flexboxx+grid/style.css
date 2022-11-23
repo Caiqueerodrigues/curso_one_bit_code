@@ -109,6 +109,7 @@ aside {
     min-width: 300px;
     gap: 10px;
     grid-area: sideBarContent;
+    height: min-content;
 }
 .sideBarCardImg {
     width: 100%;
