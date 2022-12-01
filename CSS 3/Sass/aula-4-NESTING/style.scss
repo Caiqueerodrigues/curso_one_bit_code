@@ -1,0 +1,33 @@
+.classe1  {
+    padding: 40px;
+    ul {
+    background-color: red;
+    width: 20px;
+    border-radius: 10px;
+    }
+
+    li {
+        background-color: blue;
+        width: 100px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+    #comprar {
+        background-color: green;
+        border-radius: 10px;
+        &:hover {
+            background-color: yellow;
+            transition: .5s;
+        }
+    }
+    #cancelar {
+        background-color: red;
+        border-radius: 10px;
+        &:hover {
+            background-color: gray;
+            transition: .5s;
+        }
+    }
+}

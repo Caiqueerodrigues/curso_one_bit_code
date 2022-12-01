@@ -1,0 +1,15 @@
+$btn-color: #ff4043;
+
+body {
+    background-color: black;
+}
+
+.btn1 {
+    width: 70px;
+    background-color: $btn-color;
+}
+
+.btn2 {
+    width: 80px;
+    background-color: $btn-color;
+}
