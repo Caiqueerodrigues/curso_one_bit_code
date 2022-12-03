@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body {
+    background-color: black;
+}
+
+.btn {
+    width: 125px;
+    padding: 10px 0px;
+    border-radius: 20px;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.roxo {
+        background-color: purple;
+        color: white;
+    }
+    &.amarelo {
+        background-color: yellow;
+    }
+    &.azul {
+        background-color: blue;
+        color: white;
+    }
+}

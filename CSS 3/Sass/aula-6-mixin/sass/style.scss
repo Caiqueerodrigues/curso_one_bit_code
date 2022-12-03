@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+body {
+    background-color: red;
+    text-align: center;
+}
+
+@mixin text-style ($color, $font-size, $font-family, $border) {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    border: $border;
+}
+
+.text {
+    h1 {
+        @include text-style(blue, 3em, monospace, 1px solid black )
+    }
+    p {
+       @include text-style(violet, 2em, sans-serif, 1px solid black) 
+    }
+}
+

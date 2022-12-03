@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@function color-title($background-color) {
+    @if (lightness($background-color) > 50) {
+       @return
+       black;
+    } @else {
+        @return 
+        white;
+    }
+}
+
+@mixin bg-color ($color){
+    background-color: $color;
+    color: color-title($color);    
+}
+
+.title {
+    @include bg-color(blue);
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    padding: 30px;
+}

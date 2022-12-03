@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+.text {
+    font-size: 22px;
+    font-family: monospace,sans-serif;
+    color: $primaryColor;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 1px solid $primaryColor;
+    background-color: $secondaryColor;
+    border-radius: 10px;
+    cursor: pointer;
+}

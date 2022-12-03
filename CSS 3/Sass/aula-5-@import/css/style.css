@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+}
+
+.text {
+  font-size: 22px;
+  font-family: monospace, sans-serif;
+  color: #ff0000;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid #ff0000;
+  background-color: #0000ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

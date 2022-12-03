@@ -1,0 +1,19 @@
+body {
+  background-color: red;
+  text-align: center;
+}
+
+.text h1 {
+  color: blue;
+  font-size: 3em;
+  font-family: monospace;
+  border: 1px solid black;
+}
+.text p {
+  color: violet;
+  font-size: 2em;
+  font-family: sans-serif;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
