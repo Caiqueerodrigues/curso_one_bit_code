@@ -1,0 +1,4 @@
+npm install bootstrap
+
+->Abrir o console 
+e colar, esperar criar as pastas no diretorio
