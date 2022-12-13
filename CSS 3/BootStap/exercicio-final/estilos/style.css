@@ -1,0 +1,42 @@
+body {
+  background: black url(../_imagens/backgroundLp.png) right no-repeat;
+  background-size: cover;
+  color: white;
+  margin-top: 70px;
+}
+body .container {
+  width: 90vw;
+  max-width: 500px;
+  background-color: rgba(19, 18, 18, 0.662745098);
+}
+body .container .texto-cima {
+  text-align: center;
+  margin: 15px;
+}
+body .container .texto-cima #logo-container {
+  max-width: 180px;
+}
+body .container .botao {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+body label {
+  display: inline;
+}
+body footer {
+  text-align: center;
+}
+body footer a {
+  text-decoration: none;
+  color: red;
+}
+body footer a:hover {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2px;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */
