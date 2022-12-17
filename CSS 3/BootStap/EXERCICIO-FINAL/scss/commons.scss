@@ -31,6 +31,7 @@ footer {
     }
 
     .redes-sociais {
+        display: inline-block;
         margin: 0px 20px;
         text-decoration: none;
         color: white;
@@ -42,6 +43,15 @@ footer {
 
     .obc {
         color: $color-footer;
-        margin-top: 20px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo-navbar {
+        max-width: 150px;
+    }
+    h4 {
+        padding-top: 50%;
     }
 }

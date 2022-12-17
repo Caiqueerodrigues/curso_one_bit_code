@@ -29,6 +29,7 @@ footer p {
   padding-top: 10px;
 }
 footer .redes-sociais {
+  display: inline-block;
   margin: 0px 20px;
   text-decoration: none;
   color: white;
@@ -38,9 +39,17 @@ footer .redes-sociais:hover {
 }
 footer .obc {
   color: #555252;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
+@media (max-width: 375px) {
+  .logo-navbar {
+    max-width: 150px;
+  }
+  h4 {
+    padding-top: 50%;
+  }
+}
 .bg-um {
   background: black url(../../_imagens/home/01.jpg) center top no-repeat fixed;
   background-size: cover;
