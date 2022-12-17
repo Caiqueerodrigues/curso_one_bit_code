@@ -1,5 +1,91 @@
-body {
-  background-color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body, html {
+  color: black;
+}
+
+.navbar-dark {
+  color: white;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+footer {
+  background-color: black;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 15vh;
+}
+footer p {
+  margin: 0;
+  font-weight: bold;
+  padding-top: 10px;
+}
+footer .redes-sociais {
+  margin: 0px 20px;
+  text-decoration: none;
+  color: white;
+}
+footer .redes-sociais:hover {
+  color: #b9b9b9;
+}
+footer .obc {
+  color: #555252;
+  margin-top: 20px;
+}
+
+.bg-um {
+  background: black url(../../_imagens/home/01.jpg) center top no-repeat fixed;
+  background-size: cover;
+}
+
+.primeira {
+  margin-top: 25vh;
+  height: 100vh;
+  margin-left: 10%;
+}
+.primeira .letra-maior {
+  font-size: 35px;
+}
+
+.btn {
+  padding: 15px 30px;
+  margin-top: 40px;
+}
+
+.bg-dois {
+  display: block;
+  background: black url(../../_imagens/home/03.jpg) center center no-repeat scroll;
+  background-size: cover;
+}
+
+.segunda, .terceira, .quarta {
+  width: 100%;
+  height: 100vh;
+}
+.segunda h4, .terceira h4, .quarta h4 {
+  padding-top: 15%;
+}
+
+.quarta h1 {
+  padding-top: 15%;
+}
+
+.bg-tres {
+  background: black url(../../_imagens/home/02.gif) center center no-repeat fixed;
+  background-size: cover;
+}
+
+.bg-quatro {
+  background: black url(../../_imagens/home/04.jpg) center no-repeat scroll;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

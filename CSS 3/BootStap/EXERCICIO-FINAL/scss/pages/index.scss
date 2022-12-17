@@ -1,0 +1,50 @@
+
+
+.bg-um {
+    background: black url(../../_imagens/home/01.jpg)center top no-repeat fixed;
+    background-size: cover;
+}
+
+.primeira {
+    margin-top: 25vh;
+    height: 100vh;
+    margin-left: 10%;
+
+    .letra-maior {
+        font-size: 35px;
+    }
+}
+
+.btn {
+    padding: 15px 30px;
+    margin-top: 40px;
+}
+
+.bg-dois {
+    display: block;
+    background: black url(../../_imagens/home/03.jpg)center center no-repeat scroll;
+    background-size: cover;
+}
+
+.segunda, .terceira, .quarta {
+    width: 100%;
+    height: 100vh;
+    h4{
+        padding-top: 15%;
+    }
+}
+.quarta h1 {
+    padding-top: 15%;
+}
+
+.bg-tres {
+    background: black url(../../_imagens/home/02.gif) center center no-repeat fixed;
+    background-size: cover;
+}
+
+.bg-quatro {
+    background: black url(../../_imagens/home/04.jpg)center no-repeat scroll;
+    background-size: cover;
+    
+    
+}
