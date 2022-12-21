@@ -18,6 +18,7 @@
 .background-dois {
     background: black url(../../_imagens/falcon9/02.jpg) center no-repeat fixed;
     background-size: cover;
+    
 }
 .segundo {
     width: 100vw;
@@ -79,8 +80,6 @@
         color: white;
         border-bottom: 1px solid white;
         padding-left: 15px;
-        line-height: 3;
-        width: 100%;
     }
     .right {
         text-align: right;
@@ -170,6 +169,7 @@
     //3bg
     table {
         font-size: 1rem;
+        max-width: 400px;
     }
     .background-tres > .td{
         font-size: 1.5rem;

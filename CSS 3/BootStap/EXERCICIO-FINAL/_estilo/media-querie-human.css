@@ -1,0 +1,47 @@
+@media (min-width: 767px) {
+  .num-1 {
+    margin-top: 50px !important;
+  }
+  .maior {
+    font-size: 6em;
+  }
+  #subtitulo {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  .btn {
+    font-size: 1.5em;
+  }
+  .text-2 {
+    width: 50%;
+    margin-left: 50%;
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .ter-parte {
+    padding-top: 200px !important;
+    text-align: left;
+    margin-left: -200px;
+  }
+  .quar-parte {
+    width: 50% !important;
+    margin-left: 50%;
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .final {
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .final .btn {
+    font-size: 0.8em;
+    max-width: 30%;
+  }
+}
+
+/*# sourceMappingURL=media-querie-human.css.map */
