@@ -51,6 +51,12 @@ a, .redes-sociais {
     margin-top: 5px;
 }
 
+footer {
+    p , a {
+        font-size: 1em;
+    }
+}
+
 @media (max-width: 375px) {
     .logo-navbar {
         max-width: 150px !important;

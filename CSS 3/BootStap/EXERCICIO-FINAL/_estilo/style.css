@@ -406,6 +406,10 @@ a:hover, .redes-sociais:hover {
   margin-top: 5px;
 }
 
+footer p, footer a {
+  font-size: 1em;
+}
+
 @media (max-width: 375px) {
   .logo-navbar {
     max-width: 150px !important;
