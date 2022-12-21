@@ -1,0 +1,145 @@
+
+h1 {
+    font-weight: bolder;
+    font-size: 3em;
+}
+p {
+    font-size: 1.1rem;
+}
+.btn {
+    padding: 15px 30px;
+}
+
+.parte-cima {
+    background: black url(../../_imagens/humanFlight/01.jpg) center no-repeat;
+    background-size: cover;
+
+    .num-1 {
+        width: 98vw;
+        height: 98vh;
+        text-align: center;
+        margin-top: 90%;
+        img {
+            margin-top: 40px;
+            width: 200px;
+        }
+    }
+}
+
+.segunda-parte {
+    background: black url(../../_imagens/humanFlight/02.jpg) center no-repeat scroll;
+    background-size: cover;
+    padding-bottom: 50px;
+
+    .seg-parte {
+        width: 100vw;
+        height: 100vh;
+
+        .text-1 {
+            text-align: center;
+
+            p {
+                padding: 60px 10px;
+                border-bottom: 1px solid white;
+            }
+        }
+        .text-2 {
+            margin-top: 90px;
+            h1 {
+                font-size: 3em;
+            }
+        }
+        
+    }
+}
+
+.terceira-parte {
+    background: black url(../../_imagens/humanFlight/03.jpg) center no-repeat scroll;
+    background-size: cover;
+    .ter-parte {
+        padding: 50px 10px;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.quarta-parte {
+    background: black url(../../_imagens/humanFlight/04.jpg) center no-repeat scroll;
+    background-size: cover;
+    .quar-parte {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.quinta-parte {
+    background: black url(../../_imagens/humanFlight/05.jpg) center no-repeat scroll;
+    background-size: cover;
+    .quin-parte {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.sexta-parte {
+    background-color: black;
+    .final {
+        width: 100vw;
+        height: 100vh;
+        padding: 30px;
+        text-align: center;
+        a {
+            font-size: .9rem;
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .num-1 {
+        margin-top: 50px !important;
+    }
+    .maior {
+        font-size: 6em;
+    }
+    #subtitulo {
+        font-size: 2em;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .btn {
+        font-size: 1.5em;
+    }
+
+    .text-2 {
+        width: 50%;
+        margin-left: 50%;
+        font-size: 1em;
+        padding-bottom: 300px;
+    }
+
+    .ter-parte {
+        padding-top: 200px !important;
+        text-align: left;
+        margin-left: -200px;
+    }
+
+    .quar-parte {
+        width: 50% !important;
+        margin-left: 50%;
+        font-size: 1em;
+        padding-bottom: 300px;
+    }
+
+    .final {
+        font-size: 1em;
+        padding-bottom: 300px;
+        .btn {
+            font-size: 1em;
+            max-width: 30%;
+        }
+    } 
+}

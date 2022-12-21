@@ -1,55 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-
-body, html {
-  color: black;
-}
-
-.navbar-dark {
-  color: white;
-}
-
-.nav-link {
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-footer {
-  background-color: black;
-  font-size: 0.9rem;
-  text-align: center;
-  height: 15vh;
-}
-footer p {
-  margin: 0;
-  font-weight: bold;
-  padding-top: 10px;
-}
-footer .redes-sociais {
-  display: inline-block;
-  margin: 0px 20px;
-  text-decoration: none;
-  color: white;
-}
-footer .redes-sociais:hover {
-  color: #b9b9b9;
-}
-footer .obc {
-  color: #555252;
-  margin-top: 5px;
-}
-
-@media (max-width: 375px) {
-  .logo-navbar {
-    max-width: 150px;
-  }
-  h4 {
-    padding-top: 50%;
-  }
-}
 .bg-um {
   background: black url(../../_imagens/home/01.jpg) center top no-repeat fixed;
   background-size: cover;
@@ -95,6 +43,376 @@ footer .obc {
 .bg-quatro {
   background: black url(../../_imagens/home/04.jpg) center no-repeat scroll;
   background-size: cover;
+}
+
+.background-um {
+  background: black url(../../_imagens/falcon9/01.jpg) center no-repeat fixed;
+  background-size: cover;
+}
+
+.primeiro {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+.primeiro .titulo1 {
+  margin-top: 30%;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.background-dois {
+  background: black url(../../_imagens/falcon9/02.jpg) center no-repeat fixed;
+  background-size: cover;
+}
+
+.segundo {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text-geral {
+  display: grid;
+  grid-template-areas: "a" "b" "c";
+  gap: 30px;
+  text-align: center;
+}
+.text-geral #txt1 {
+  grid-area: "a";
+}
+.text-geral #txt2 {
+  grid-area: "b";
+}
+.text-geral #txt3 {
+  grid-area: "c";
+}
+.text-geral .info {
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+}
+.text-geral .text-baixo {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.text-meio {
+  margin: 20px auto;
+  margin-bottom: 300px;
+  width: 80%;
+}
+.text-meio p {
+  line-height: 40px;
+}
+
+.background-tres {
+  width: 100vw;
+  height: 96vh;
+}
+.background-tres .text-carrossel {
+  width: 80%;
+  height: 80vh;
+  text-align: left;
+  font-size: 0.5em;
+  margin-top: 10vh;
+}
+.background-tres .carga-util {
+  width: 400px !important;
+}
+.background-tres td {
+  color: white;
+  border-bottom: 1px solid white;
+  padding-left: 15px;
+  line-height: 3;
+  width: 100%;
+}
+.background-tres .right {
+  text-align: right;
+}
+
+.background-quatro {
+  background: red url(../../_imagens/falcon9/08.jpg) center no-repeat scroll;
+  background-size: cover;
+}
+.background-quatro .quarto {
+  width: 100vw;
+  height: 100vh;
+}
+.background-quatro .text {
+  width: 70%;
+  padding-top: 10%;
+}
+.background-quatro .text .info2 {
+  line-height: 35px;
+}
+.background-quatro .text .tabela {
+  width: 90vw;
+}
+.background-quatro .text .tabela .left-text {
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+.background-quatro .text .tabela .right-text {
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+
+.background-cinco {
+  background-color: black;
+  padding: 50px 0px;
+}
+
+.background-seis {
+  width: 100vw;
+  height: 80vh;
+  background-color: black;
+  text-align: center;
+}
+.background-seis .final {
+  padding-top: 40%;
+  font-size: 1em;
+}
+.background-seis .final p > a {
+  color: #555252;
+  font-weight: bold;
+}
+.background-seis .final .btn {
+  margin-left: 20px;
+}
+
+@media (min-width: 767px) {
+  .titulo1 {
+    font-size: 7em !important;
+  }
+  .titulo2 {
+    font-size: 1.5em;
+  }
+  .text-geral {
+    grid-template-areas: "a b c";
+  }
+  .text-meio {
+    margin-top: 100px;
+    font-size: 2rem;
+  }
+  .info2 {
+    font-size: 1.5rem;
+  }
+  table {
+    font-size: 1rem;
+  }
+  .background-tres > .td {
+    font-size: 1.5rem;
+  }
+  .sub-titulo {
+    font-size: 1.9em !important;
+  }
+  .carousel-inner {
+    height: 80vh !important;
+  }
+  .text {
+    width: 40vw;
+  }
+  .text .tabela {
+    width: 50vw !important;
+  }
+}
+.final {
+  padding-top: 20% !important;
+  font-size: 2rem;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.btn {
+  padding: 15px 30px;
+}
+
+.parte-cima {
+  background: black url(../../_imagens/humanFlight/01.jpg) center no-repeat;
+  background-size: cover;
+}
+.parte-cima .num-1 {
+  width: 98vw;
+  height: 98vh;
+  text-align: center;
+  margin-top: 90%;
+}
+.parte-cima .num-1 img {
+  margin-top: 40px;
+  width: 200px;
+}
+
+.segunda-parte {
+  background: black url(../../_imagens/humanFlight/02.jpg) center no-repeat scroll;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+.segunda-parte .seg-parte {
+  width: 100vw;
+  height: 100vh;
+}
+.segunda-parte .seg-parte .text-1 {
+  text-align: center;
+}
+.segunda-parte .seg-parte .text-1 p {
+  padding: 60px 10px;
+  border-bottom: 1px solid white;
+}
+.segunda-parte .seg-parte .text-2 {
+  margin-top: 90px;
+}
+.segunda-parte .seg-parte .text-2 h1 {
+  font-size: 3em;
+}
+
+.terceira-parte {
+  background: black url(../../_imagens/humanFlight/03.jpg) center no-repeat scroll;
+  background-size: cover;
+}
+.terceira-parte .ter-parte {
+  padding: 50px 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.quarta-parte {
+  background: black url(../../_imagens/humanFlight/04.jpg) center no-repeat scroll;
+  background-size: cover;
+}
+.quarta-parte .quar-parte {
+  width: 100vw;
+  height: 100vh;
+}
+
+.quinta-parte {
+  background: black url(../../_imagens/humanFlight/05.jpg) center no-repeat scroll;
+  background-size: cover;
+}
+.quinta-parte .quin-parte {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sexta-parte {
+  background-color: black;
+}
+.sexta-parte .final {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  text-align: center;
+}
+.sexta-parte .final a {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 767px) {
+  .num-1 {
+    margin-top: 50px !important;
+  }
+  .maior {
+    font-size: 6em;
+  }
+  #subtitulo {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  .btn {
+    font-size: 1.5em;
+  }
+  .text-2 {
+    width: 50%;
+    margin-left: 50%;
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .ter-parte {
+    padding-top: 200px !important;
+    text-align: left;
+    margin-left: -200px;
+  }
+  .quar-parte {
+    width: 50% !important;
+    margin-left: 50%;
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .final {
+    font-size: 1em;
+    padding-bottom: 300px;
+  }
+  .final .btn {
+    font-size: 1em;
+    max-width: 30%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body, html {
+  color: black;
+  overflow-x: hidden;
+}
+
+.navbar-dark {
+  color: white;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+footer {
+  background-color: black;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 15vh;
+}
+footer p {
+  margin: 0;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+a, .redes-sociais {
+  display: inline-block;
+  margin: 0px 20px;
+  text-decoration: none;
+  color: white;
+}
+a:hover, .redes-sociais:hover {
+  color: #b9b9b9;
+}
+
+.obc {
+  background-color: black;
+  color: #555252;
+  margin-top: 5px;
+}
+
+@media (max-width: 375px) {
+  .logo-navbar {
+    max-width: 150px !important;
+  }
+  h4 {
+    padding-top: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

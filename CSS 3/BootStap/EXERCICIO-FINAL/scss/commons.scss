@@ -7,6 +7,7 @@
 }
 body, html {
     color: black;
+    overflow-x: hidden;
 }
 
 .navbar-dark {
@@ -30,26 +31,29 @@ footer {
         padding-top: 10px;
     }
 
-    .redes-sociais {
-        display: inline-block;
-        margin: 0px 20px;
-        text-decoration: none;
-        color: white;
+    
+}
 
-        &:hover {
-            color: $color-hover;
-        }
-    }
+a, .redes-sociais {
+    display: inline-block;
+    margin: 0px 20px;
+    text-decoration: none;
+    color: white;
 
-    .obc {
-        color: $color-footer;
-        margin-top: 5px;
+    &:hover {
+        color: $color-hover;
     }
+}
+
+.obc {
+    background-color: black;
+    color: $color-footer;
+    margin-top: 5px;
 }
 
 @media (max-width: 375px) {
     .logo-navbar {
-        max-width: 150px;
+        max-width: 150px !important;
     }
     h4 {
         padding-top: 50%;
