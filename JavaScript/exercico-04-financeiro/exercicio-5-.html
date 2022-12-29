@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 5</title>
+    </head>
+    <body style="background-color: black; color: red; text-align: center;">
+        
+        <div style="border: 2px solid red; border-radius: 10px; margin: 10px; padding: 20px;">
+            <h1>Controle Financeiro</h1>
+                <button id="iniciar" onclick="financeiro(0)">INICIAR</button><br><br>
+                <button onclick="financeiro(1)">ADICIONAR DINHEIRO</button>
+                <button onclick="financeiro(2)">SUBTRAIR DINHEIRO</button><br><br>
+                <button onclick="financeiro(3)">FINALIZAR</button>
+        </div>
+
+        <div id="menuInterativo" style="border: 2px solid red; border-radius: 10px; margin: 10px; padding: 20px;">
+            <h1>Menu Interativo</h1>
+                <button onclick="menu(1)">Opção 1</button>
+                <button onclick="menu(2)">Opção 2</button>
+                <button onclick="menu(3)">Opção 3</button>
+                <button onclick="menu(4)">Opção 4</button><br><br>
+                <button onclick="menu(`encerrar`)">ENCERRAR</button>
+        </div>
+
+        <script src="ex-05.js"></script>
+    </body>
+</html>
