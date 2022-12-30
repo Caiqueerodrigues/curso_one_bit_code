@@ -28,9 +28,11 @@ function  baralho(value) {
         resposta = prompt(`Quer adicionar uma carta? (Sim/Nao)`)
     }
     while (resposta === `sim` || value === `adc`) {
-        adicionarCarta += prompt(`Qual o nome e o nipe da carta que quer adicionar?`)
+        adicionarCarta += prompt(`Qual o nome e o nipe da carta que quer adicionar?`) + (',')
         cartas.unshift(adicionarCarta)
-        alert(cartas)
+        for (i = 0; cartas.length > i; i++) {
+            alert(`${i} - ${cartas[i]}`)
+        }
         resposta = prompt(`Quer adicionar mais uma carta? (Sim/Nao)`)
     }
     if (resposta === `nao` || value === `puxar`) {
@@ -39,7 +41,9 @@ function  baralho(value) {
                 let cartaRemovida = cartas.shift()
                 alert(`A carta removida foi ${cartaRemovida}`)
             } else  {
-                alert(`${cartas.indexOf()} - ${cartas}`)
+                for (i = 0; cartas.length > i; i++) {
+                    alert(`${cartas.indexOf(i)} - ${cartas[i]}`)
+                }
             }
     } 
 }
