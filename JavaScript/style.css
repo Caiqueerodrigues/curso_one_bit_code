@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: red;
+    text-align: center;
+    margin: auto;
+}
+
+div {
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    margin:20px
+}
