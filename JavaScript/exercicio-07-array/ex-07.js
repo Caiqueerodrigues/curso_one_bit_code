@@ -1,19 +1,42 @@
 function dr(value) {
-    let pacientes = []
-    let resposta = null
+    let pacientes = [`Caique`, `Rodrigo`, `Felipe`, `Tainara`,`Rodrigues`]
+    let resposta = ``
 
     if (value === 0) {
         resposta = prompt(`Quer adicionar um paciente na fila? (Sim/Nao)`)
+    }      
 
-        while(resposta === `sim`) { 
-            pacientes.push(prompt(`Digite o nome do paciente:`))
-            resposta = prompt(`Quer adicionar um paciente na fila? (Sim/Nao)`)
+    if (value === `consultar`) {
+        let respostaConsulta = prompt(`Quer Chamar o próximo paciente para a consulta? (Sim/Nao)`)
+        if (respostaConsulta === `sim`) {
+            for (i2 = 0; pacientes.length > 0; i2++) {
+                let pacienteRemovido = pacientes.shift(i2)
+                alert(`O próximo paciente a consultar é o ${pacienteRemovido}`)
+                respostaConsulta = prompt(`Quer Chamar o próximo paciente para a consulta? (Sim/Nao)`)
+                if (respostaConsulta === `nao` || respostaConsulta ``) {
+                    alert(`Esta é a fila \n ${pacientes}`)
+                    break
+                }
+            }
         }
-        
-    } else if (resposta === `nao`) {
-            alert(`Ta bom, obigado, esta é a fila \n ${pacientes}`)
+        if (respostaConsulta === `nao`) {
+            alert(`Aguarde o Médico chamar o próximo!`)
+        }
+    }
 
-    } else if (value === `fim`) {
+    while(resposta === `sim`) { 
+        let adicionarPaciente = prompt(`Digite o nome do paciente:`)
+        pacientes.push(adicionarPaciente)
+        resposta = prompt(`Quer adicionar um paciente na fila? (Sim/Nao)`)
+    }
+
+    if (resposta === `nao`) {
+        for (i = 0; pacientes.length > i; i++) {
+            let resultado = alert('Olá, esta é a fila \n' + i + ' - '+ pacientes[i])
+        } 
+    } 
+
+    if (value === `fim`) {
         document.getElementById(`dr`).style.display=`none`
     }
 }
@@ -26,7 +49,7 @@ function  baralho(value) {
     if (value === 1) {
         alert(cartas)
         resposta = prompt(`Quer adicionar uma carta? (Sim/Nao)`)
-    } else  if (`fim`) {
+    } else  if (value === `fim`) {
         document.getElementById(`baralho`).style.display=`none`
     }
     while (resposta === `sim` || value === `adc`) {
