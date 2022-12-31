@@ -10,7 +10,7 @@ function dr(value) {
         let respostaConsulta = prompt(`Quer Chamar o próximo paciente para a consulta? (Sim/Nao)`)
         if (respostaConsulta === `sim`) {
             for (i2 = 0; pacientes.length > 0; i2++) {
-                let pacienteRemovido = pacientes.shift(i2)
+                let pacienteRemovido = pacientes.shift()
                 alert(`O próximo paciente a consultar é o ${pacienteRemovido}`)
                 respostaConsulta = prompt(`Quer Chamar o próximo paciente para a consulta? (Sim/Nao)`)
                 if (respostaConsulta === `nao` || respostaConsulta ``) {
