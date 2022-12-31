@@ -26,9 +26,11 @@ function  baralho(value) {
     if (value === 1) {
         alert(cartas)
         resposta = prompt(`Quer adicionar uma carta? (Sim/Nao)`)
+    } else  if (`fim`) {
+        document.getElementById(`baralho`).style.display=`none`
     }
     while (resposta === `sim` || value === `adc`) {
-        adicionarCarta += prompt(`Qual o nome e o nipe da carta que quer adicionar?`) + (',')
+        adicionarCarta = prompt(`Qual o nome e o nipe da carta que quer adicionar?`)
         cartas.unshift(adicionarCarta)
         for (i = 0; cartas.length > i; i++) {
             alert(`${i} - ${cartas[i]}`)
