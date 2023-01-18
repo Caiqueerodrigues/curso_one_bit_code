@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="pedidos.js" defer></script>
+        <title>Trabalhando com Input's</title>
+    </head>
+    <body style="text-align: center; color: red; background-color: black;">
+        <h1>Trabalhando com Formulários</h1>
+        <hr>
+        <form id="form">
+            <h2>Montar Pedido</h2>
+            <fieldset>
+                <label for="name">Nome: </label><br>
+                    <input type="text" name="name" id="name"><br><br>
+                <label for="address">Endereço de Entrega: </label><br>
+                    <input type="text" name="endereço" id="address"><br><br>
+                <label for="pao">Tipo de Pão:</label><br>
+                    <select name="pao" id="pao">
+                        <option value="null" selected>Selecione uma opção...</option>
+                        <option value="3queijos">Três Queijos</option>
+                        <option value="Parmesão e Orégano">Parmesão e Orégano</option>
+                        <option value="9Graos">9 Grãos</option>
+                        <option value="Italiano Branco">Italiano Branco</option>
+                        <option value="Granola Salgada">Granola Salgada</option>
+                        <option value="Manteiga Temperada">Manteiga Temperada</option>
+                    </select>
+                    <br><br>
+                    <label for="recheio">Recheio Principal: </label><br> 
+                        <label for="Carne">
+                            <input type="radio" name="recheio" id="Carne" value="Carne">Carne
+                        </label>
+                        <label for="Frango">
+                            <input type="radio" name="recheio" id="Frango" value="Frango">Frango
+                        </label>
+                        <label for="Vegano">
+                            <input type="radio" name="recheio" id="Vegano" value="Vegano">Vegano
+                        </label>
+                        <br><br>
+                    <label for="Salada">Salada: </label><br>
+                        <label for="alface">
+                            <input type="checkbox" name="salada" value="Alface" id="alface">Alface
+                        </label>
+                        <label for="tomate">
+                            <input type="checkbox" name="salada" value="Tomate" id="tomate" >Tomate
+                        </label>
+                        <label for="azeitona">
+                            <input type="checkbox" name="salada" value="Azeitona" id="azeitona" >Azeitona
+                        </label>
+                        <label for="cenoura">
+                            <input type="checkbox" name="salada" value="Cenoura" id="cenoura" >Cenoura
+                        </label>
+                        <label for="picles">
+                            <input type="checkbox" name="salada" value="Picles" id="picles" >Picles
+                        </label>
+                    <br><br>
+                    <textarea name="obs" id="obs" cols="50" rows="10" placeholder="Observações, Recado, Ponto de referência"></textarea>
+                    <br><br>
+                    <input type="submit" value="Enviar Pedidos">
+            </fieldset>
+        </form>
+    </body>
+</html>

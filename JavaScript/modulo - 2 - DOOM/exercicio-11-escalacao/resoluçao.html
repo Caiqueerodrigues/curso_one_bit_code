@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resolução da ESCALAÇÃO</title>
+    </head>
+    <body>
+        <h1>Escalação do Times</h1>
+        <hr>
+        <h2>Escalar Jogador</h2>
+        <p>
+            <label for="posicao">Posição: </label>
+            <input type="text" name="position" id="posicao"  placeholder="EX: Atacante" required>
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="name" required>
+            <label for="number">Número da Camisa: </label>
+            <input type="number" name="number" id="number" required placeholder="EX: 10"><br>
+            <button onclick="escalar()">Escalar</button>
+        </p>
+        <hr>
+        <h2>Time</h2>
+        <ol id="teamList">
+
+        </ol>
+        <hr>
+        <h2>Remover Jogador</h2>
+        <p>
+            <label for="numberToRemove">Número da Camisa: </label>
+            <input type="number" name="nameToRemove" id="numberToRemove" placeholder="EX: 10" ><br>
+            <button onclick="remover()">Remover</button>
+        </p>
+        <hr>
+
+        <script src="resolucao.js"></script>
+    </body>
+</html>
