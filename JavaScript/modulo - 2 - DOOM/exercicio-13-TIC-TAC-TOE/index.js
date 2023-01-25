@@ -1,6 +1,16 @@
 let main = document.querySelector(`main`)
 let section = document.querySelector(`section`)
-// let jogo = document.getElementById(`jogo`)
+let visor = document.getElementById(`visor`)
+
+let casaA = document.querySelector(`casaA`)
+let casaB = document.querySelector(`casaB`)
+let casaC = document.querySelector(`casaC`)
+let casaD = document.querySelector(`casaD`)
+let casaE = document.querySelector(`casaE`)
+let casaF = document.querySelector(`casaF`)
+let casaG = document.querySelector(`casaG`)
+let casaH = document.querySelector(`casaH`)
+let casaI = document.querySelector(`casaI`)
 
 let btnSwitchTheme = document.getElementById(`theme`).addEventListener(`click`, function(){
     const root = document.querySelector(`:root`)
@@ -79,7 +89,7 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
     } else{
         var nomeJogador1 = jogador1.value
         label1.innerHTML= `<label for="jogador1">Qual o nome do Segundo Jogador? </label>`
-        alert(`ATé Aqui tudo OK \n Nome: ${nomeJogador1} \n Opção: ${opcaoJogador1}`)
+        console.log(`ATé Aqui tudo OK \n Nome: ${nomeJogador1} \n Opção: ${opcaoJogador1}`)
         jogador1.value = `` 
         jogador1.focus()
         switcOpcao.style.display=`none`
@@ -111,11 +121,11 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
         } else {
             var nomeJogador2 = jogador1.value
         }
-        alert(`Nome do jogador 1: ${nomeJogador1} Opção Escolhida: ${opcaoJogador1} \n Nome do Jogador 2: ${nomeJogador2} Opção: ${opcaoJogador2}`)
+        console.log(`Nome do jogador 1: ${nomeJogador1} Opção Escolhida: ${opcaoJogador1} \n Nome do Jogador 2: ${nomeJogador2} Opção: ${opcaoJogador2}`)
     section.style.display=`none`
-    main.style.display=`block`
-    
+    main.style.display=`block`   
     })
+    let vezDoJogador = `É a vez de ${nomeJogador1[0].toUpperCase + nomeJogador1}`
 })
     
     
