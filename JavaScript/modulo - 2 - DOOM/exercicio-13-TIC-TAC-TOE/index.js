@@ -2,16 +2,20 @@ let main = document.querySelector(`main`)
 let section = document.querySelector(`section`)
 let visor = document.getElementById(`visor`)
 
-let casaA = document.querySelector(`casaA`)
-let casaB = document.querySelector(`casaB`)
-let casaC = document.querySelector(`casaC`)
-let casaD = document.querySelector(`casaD`)
-let casaE = document.querySelector(`casaE`)
-let casaF = document.querySelector(`casaF`)
-let casaG = document.querySelector(`casaG`)
-let casaH = document.querySelector(`casaH`)
-let casaI = document.querySelector(`casaI`)
+var nomeJogador1 = ``
+var opcaoJogador1 = ``
+var nomeJogador2 = ``
+var opcaoJogador2 = ``
+let jogadores = [nomeJogador1, nomeJogador2]
 
+let vezDoJogador1 = ``
+let vezDoJogador2 = ``
+
+let comecar = ``
+
+const erro = `[ERRO] Escolha outra casa Vazia, Por favor.`
+
+//tema
 let btnSwitchTheme = document.getElementById(`theme`).addEventListener(`click`, function(){
     const root = document.querySelector(`:root`)
     const labelTheme = document.getElementById(`themeLabel`)
@@ -41,6 +45,7 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
         jogador1.autocomplete=`off`
         jogador1.style.borderRadius=`20px`
         jogador1.style.padding=`10px`
+        jogador1.style.textTransform=`capitalize`
     var btnJogador2 = document.createElement(`button`)
         btnJogador2.innerText = `Próximo Jogador`
         btnJogador2.classList=`btn btn-outline-danger`
@@ -53,7 +58,7 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
         switcOpcao.type=`checkbox`
         switcOpcao.classList= `form-check-input`
         switcOpcao.id=`switchOpcao`
-    var opcaoJogador1 = `O`
+    opcaoJogador1 = `O`
     let opcaoSwitch = document.createElement(`div`)
         opcaoSwitch.classList=`form-switch`
         opcaoSwitch.role=`switch`
@@ -76,70 +81,236 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
 //button seguir
     btnJogador2.addEventListener(`click`, function(){
     //dados jogador 1
-    if (switcOpcao.checked) {
-        switcOpcao.value = `X`
-        opcaoJogador1 = switcOpcao.value
-    }else {
-        switcOpcao.value = `O`
-        opcaoJogador1 = switcOpcao.value
-    }   
-    if (jogador1.value.length == 0) {
-        alert(`[ERRO] Digite um nome para o Jogador`)
-        return
-    } else{
-        var nomeJogador1 = jogador1.value
-        label1.innerHTML= `<label for="jogador1">Qual o nome do Segundo Jogador? </label>`
-        console.log(`ATé Aqui tudo OK \n Nome: ${nomeJogador1} \n Opção: ${opcaoJogador1}`)
-        jogador1.value = `` 
-        jogador1.focus()
-        switcOpcao.style.display=`none`
-    }
-    if (opcaoJogador1 === `X`) {
-        var opcaoJogador2 = `O`
-        paragrafo.innerText=`Você será:`
-        opcaoX.style.display=`none`
-        divOpcao.id=`divOpcaoTextCenter`
-        opcaoO.innerHTML=`<label id="o2" for="switchOpcao"> O</label>`
-    } else {
-        var opcaoJogador2 = `X`
-        paragrafo.innerText=`Você será:`
-        opcaoO.style.display=`none`
-        divOpcao.id=`divOpcaoTextCenter`
-        opcaoX.innerHTML=`<label id="x2" for="switchOpcao"> X</label>`
-    } 
-    btnJogador2.style.display=`none`
-        //2 jogador
-    let btnSeguir = document.createElement(`button`)
-        btnSeguir.innerText = `Seguir`
-        btnSeguir.classList=`btn btn-outline-danger`
-        btnSeguir.style.marginTop=`10px`
-    section.appendChild(btnSeguir).addEventListener(`click`,function(){
-        if (jogador1.value.length == ``) {
-            alert(`[ERRO] Digite um Nome válido`)
-            jogador1.focus()
+        if (switcOpcao.checked) {
+            switcOpcao.value = `X`
+            opcaoJogador1 = switcOpcao.value
+        }else {
+            switcOpcao.value = `O`
+            opcaoJogador1 = switcOpcao.value
+        }   
+        if (jogador1.value.length == 0) {
+            alert(`[ERRO] Digite um nome para o Jogador`)
             return
-        } else {
-            var nomeJogador2 = jogador1.value
+        } else{
+            nomeJogador1 = jogador1.value
+            label1.innerHTML= `<label for="jogador1">Qual o nome do Segundo Jogador? </label>`
+            console.log(`ATé Aqui tudo OK \n Nome: ${nomeJogador1} \n Opção: ${opcaoJogador1}`)
+            jogador1.value = `` 
+            jogador1.focus()
+            switcOpcao.style.display=`none`
         }
-        console.log(`Nome do jogador 1: ${nomeJogador1} Opção Escolhida: ${opcaoJogador1} \n Nome do Jogador 2: ${nomeJogador2} Opção: ${opcaoJogador2}`)
-    section.style.display=`none`
-    main.style.display=`block`   
+        if (opcaoJogador1 === `X`) {
+            opcaoJogador2 = `O`
+            paragrafo.innerText=`Você será:`
+            opcaoX.style.display=`none`
+            divOpcao.id=`divOpcaoTextCenter`
+            opcaoO.innerHTML=`<label id="o2" for="switchOpcao"> O</label>`
+        } else {
+            opcaoJogador2 = `X`
+            paragrafo.innerText=`Você será:`
+            opcaoO.style.display=`none`
+            divOpcao.id=`divOpcaoTextCenter`
+            opcaoX.innerHTML=`<label id="x2" for="switchOpcao"> X</label>`
+        } 
+        btnJogador2.style.display=`none`
+            //2 jogador
+        let btnSeguir = document.createElement(`button`)
+            btnSeguir.innerText = `Seguir`
+            btnSeguir.classList=`btn btn-outline-danger`
+            btnSeguir.style.marginTop=`10px`
+
+        section.appendChild(btnSeguir).addEventListener(`click`,function(){
+            if (jogador1.value.length == ``) {
+                alert(`[ERRO] Digite um Nome válido`)
+                jogador1.focus()
+                return
+            } else {
+                nomeJogador2 = jogador1.value
+                vezDoJogador1 = `É a vez de ${nomeJogador1[0].toUpperCase() + nomeJogador1.substring(1)}`
+                vezDoJogador2 = `É a vez de ${nomeJogador2[0].toUpperCase() + nomeJogador2.substring(1)}`
+            }
+            console.log(`Nome do jogador 1: ${nomeJogador1} Opção Escolhida: ${opcaoJogador1} \n Nome do Jogador 2: ${nomeJogador2} Opção: ${opcaoJogador2}`)
+            section.style.display=`none`
+            main.style.display=`block`
+            quemComeça()
+        }) 
     })
-    let vezDoJogador = `É a vez de ${nomeJogador1[0].toUpperCase + nomeJogador1}`
 })
-    
-    
-    //dados do jogador 2
-//     var jogador2 = jogador1.value
-//     var nomeJogador2 = jogador2
-//     if(jogador2.length = 0) {
-//         alert(`[ERRO] Digite um nome para o Jogador Nº 2`)
-//         return
-//     } else{ 
-//         
-//     }
-    
-//     res = `Nome: ${nomeJogador2} Opcao: ${opcaoJogador2}`
-//     console.log(res)
-// })
+
+//sorteio de quem começa
+function quemComeça (){
+    comecar = Math.floor(Math.random() * 10)
+    console.log(`O número sorteado foi ${comecar}`)
+    if (comecar === 1 || comecar === 3 || comecar === 5 || comecar === 7 || comecar === 9) {
+        visor.innerText = vezDoJogador1
+        comecar = vezDoJogador1
+    } else {
+        visor.innerText = vezDoJogador2
+        comecar= vezDoJogador2
+    }
+}   
+
+//marcar casa
+document.querySelector(`.casaA`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === ``) {
+        if (comecar === vezDoJogador1 ) {
+            buttonTarget.value= opcaoJogador1
+            buttonTarget.innerText = opcaoJogador1
+            comecar = vezDoJogador2
+            visor.innerText = comecar
+        } else {
+            buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+        }
+        return
+    }else {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaB`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaC`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaD`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaE`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaF`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaG`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaH`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
+})
+document.querySelector(`.casaI`).addEventListener(`click`, function marcarCasa(ev){
+    const buttonTarget = ev.currentTarget
+    if (buttonTarget.innerText === `` && comecar === vezDoJogador1 ) {
+        buttonTarget.value= opcaoJogador1
+        buttonTarget.innerText = opcaoJogador1
+        comecar = vezDoJogador2
+        visor.innerText = comecar
+        re
+    } else if (buttonTarget.innerText === `` && comecar === vezDoJogador2) {
+        buttonTarget.value === opcaoJogador2
+        buttonTarget.innerText === opcaoJogador2
+        comecar = vezDoJogador1 
+        visor.innerText = comecar
+    }
+    if ( buttonTarget.innerText !== ``) {
+        alert(erro)
+    }
 })
