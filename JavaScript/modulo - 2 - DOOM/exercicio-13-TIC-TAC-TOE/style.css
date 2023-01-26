@@ -172,16 +172,11 @@ input:checked {
 
 
 hr {
-    margin-top: 10px;
+    margin: 10px 0px 10px -125px;
+    width: 98vw;
+    height: 2px !important;
 }
 
-/* footer {
-    position: fixed;
-    bottom: 0;
-    padding-top: 20px;
-    width: 100vw;
-
-} */
 .icon {
     text-decoration: none;
     font-weight: bold;

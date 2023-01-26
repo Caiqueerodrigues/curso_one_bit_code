@@ -125,6 +125,7 @@ let btnIniciar = document.querySelector(`#btnIniciar`)
             //2 jogador
         let btnSeguir = document.createElement(`button`)
             btnSeguir.innerText = `Seguir`
+            btnSeguir.id=`btnSeguir`
             btnSeguir.classList=`btn btn-outline-danger`
             btnSeguir.style.marginTop=`10px`
 
