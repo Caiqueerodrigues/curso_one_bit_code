@@ -45,7 +45,23 @@ section {
 
 main {
     display: none;
+}
+.resultado {
+    text-align: center;
+    height: 80vh;
+    font-size: 3rem;
+}
 
+#placar {
+    width: max-content;
+    height: max-content;
+    display:inline;
+    position: absolute;
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+    color: var(--color);
+    font-weight: bold;
 }
 
 #theme {
