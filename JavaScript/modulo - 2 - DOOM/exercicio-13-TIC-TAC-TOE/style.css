@@ -11,6 +11,7 @@
 :root {
     --bg-color: black;
     --color: red;
+    --color-vitoria: rgba(255, 0, 0, 0.452);
 }
 
 .text-center {
@@ -49,7 +50,9 @@ main {
 .resultado {
     text-align: center;
     height: 80vh;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    position: absolute;
+    display: inline;
 }
 
 #placar {
@@ -60,7 +63,7 @@ main {
     float: left;
     margin-left: 10px;
     padding: 10px;
-    color: var(--color);
+    color: blue;
     font-weight: bold;
 }
 
