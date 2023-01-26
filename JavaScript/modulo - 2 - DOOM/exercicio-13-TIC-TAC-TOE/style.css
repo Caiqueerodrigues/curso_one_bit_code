@@ -73,15 +73,18 @@ input:checked {
     min-height: 50px !important;
     width: 60%;
     color: var(--color);
-    font-size: 3rem;
+    font-size: 1.6rem;
     background-color: white;
     margin: 10px auto;
     border-radius: 40px;
+    padding-left: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px var(--bg-color);
 }
 
 .jogo, .jogo2, .jogo3 {
     max-height: 24vh;
-    max-width: 70vw;
+    max-width: 50vw;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -89,12 +92,15 @@ input:checked {
 }
 
 .casa {
-
+    height: 24vh;
     width: 100%;
     font-size: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    color: var(--color);
+    border: 0;
 }
 .casaA, .casaD, .casaB, .casaE {
     border-bottom: 10px solid;
@@ -102,19 +108,19 @@ input:checked {
     border-color: var(--color);
     border-radius: 0px 10px 0px 10px;
 }
-.casaD {
-    border-radius: 0px 0px 0px 10px;
-}
 .casaB {
     border-radius: 0px 10px 0px 0px;
-}
-.casaE {
-    border-radius: 0px;
 }
 .casaC, .casaF {
     border-bottom: 10px solid;
     border-radius: 0px 0px 10px 0px;
     border-color: var(--color);
+}
+.casaD {
+    border-radius: 0px 0px 0px 10px;
+}
+.casaE {
+    border-radius: 0px;
 }
 .casaG, .casaH {
     border-right: 10px solid;
