@@ -34,7 +34,7 @@ h1 {
 }
 
 section {
-    height: 55vh;
+    height: 45vh;
     margin: 10% auto;
 }
 #btnIniciar {
@@ -111,7 +111,7 @@ input:checked {
 }
 
 .casa {
-    height: 24vh;
+    height: 21vh;
     width: 100%;
     font-size: 140px;
     display: flex;
@@ -168,8 +168,6 @@ input:checked {
     display: inline;
     font-size: 9rem;
 }
-
-
 
 hr {
     margin: 10px 0px 10px -125px;
