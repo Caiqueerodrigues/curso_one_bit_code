@@ -605,4 +605,5 @@ btnJogarNovamente.addEventListener(`click`, function () {
     quemComeça()
     visor.innerText = comecar
     vencedorPartida = ``
+    indice = 0
 })
