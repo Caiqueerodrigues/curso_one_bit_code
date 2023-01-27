@@ -46,9 +46,8 @@
 }
 
 @media (min-width: 768px) {
-    body {
-        width: 80vw;
-        margin: auto;
+    hr {
+        width: 100vw;
     }
     #visor {
         max-width: 30vw;

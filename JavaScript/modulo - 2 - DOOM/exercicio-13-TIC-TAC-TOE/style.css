@@ -170,8 +170,8 @@ input:checked {
 }
 
 hr {
-    margin: 10px 0px 10px -125px;
-    width: 98vw;
+    margin: 10px 0px;
+    /* width: 100vw; */
     height: 2px !important;
 }
 
