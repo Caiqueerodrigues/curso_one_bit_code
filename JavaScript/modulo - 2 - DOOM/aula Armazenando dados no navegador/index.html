@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-color: #000;
+            color: #f00;
+            border: 3px solid;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+    <script src="index.js" defer></script>
+    <title>Recursos do Navegador</title>
+  </head>
+  <body>
+    <h1>Recursos de Armazenamento do Navegador</h1>
+    <hr>
+    <h2>Session Storage (Fechar aba se perde)</h2>
+    <label for="inf1">Digite uma Informação: </label>
+    <input type="text" id="inf1">
+    <button id="session">Guardar</button>
+    <button id="readSession">Ler</button>
+
+    <h2>Local Storage (Só se perde se APAGAR)</h2>
+    <label for="inf2">Digite uma Informação:</label>
+    <input type="text" id="inf2">
+    <button id="local">Guardar</button>
+    <button id="readLocal">Ler</button>
+
+    <h2>Cookies (Data de expirção e pode ser enviado para o servidor)</h2>
+    <label for="inf3">Digite uma Informação: </label>
+    <input type="text" id="inf3">
+    <button id="cookies">Guardar</button>
+    <br><br>
+    <label for="inf4">Digite uma Informação: </label>
+    <input type="text" id="inf4">
+    <button id="cookies2">Guardar</button>
+  </body>
+</html>
