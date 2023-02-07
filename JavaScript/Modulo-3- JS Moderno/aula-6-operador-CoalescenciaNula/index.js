@@ -15,3 +15,12 @@ console.log(a ?? b ?? c)
 
 //OPERADOR (??) ignora essa conversao
 //só será FALSE NULL e UNDEFINED
+
+//------------------------------------------------------------
+//atribuições com este operador
+
+let d = 0
+
+let e = d ?? 42
+
+console.log({d,e})
