@@ -1,0 +1,11 @@
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/index.css ***!
+  \************************************************************************/
+@charset "utf-8";
+
+body {
+    margin-top: 50vh;
+    background-color: #000;
+    color: #f00;
+    text-align: center;
+}
