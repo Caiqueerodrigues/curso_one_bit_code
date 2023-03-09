@@ -49,3 +49,7 @@ function resultado(peso, altura) {
 }
 
 resultado(70,1.80)
+resultado(`1`,1.80)
+resultado(70,1.54)
+resultado(89,`1.80`)
+resultado(100,1.80)
