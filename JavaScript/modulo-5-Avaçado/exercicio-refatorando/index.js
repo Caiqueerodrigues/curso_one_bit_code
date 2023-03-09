@@ -1,16 +1,13 @@
-function imc(peso, altura) {
-    return calculoImc = new Promise( (resolved, rejected) => {
-        if(typeof peso != `number` || typeof altura != `number`) {
-            if( typeof altura != `number`) {
-                rejected(`[ERRO], Valor informado para ALTURA NÃO é um Número.`)
-            } else {
-                rejected(`[ERRO], Valor informado para PESO NÃO é um Número.`)
-            }
+async function imc(peso, altura) {
+    if(typeof peso != `number` || typeof altura != `number`) {
+        if( typeof altura != `number`) {
+            return rejected(`[ERRO], Valor informado para ALTURA NÃO é um Número.`)
         } else {
-            let alturaTotal = altura*altura
-            resolved(peso / alturaTotal)
+             return rejected(`[ERRO], Valor informado para PESO NÃO é um Número.`)
         }
-    })
+    } else {
+        return peso / (altura * altura) 
+    }
 }
 
 function resultado(peso, altura) {
