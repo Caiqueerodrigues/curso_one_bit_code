@@ -20,16 +20,13 @@ function getAge(birthday) {
     })
 }
 
-getAge('1996-12-05').then((age => {
-    checkAge(age).then( (maior) => {
-        if (maior === true) {
-            console.log(`Maior de IDADE`)
-        } else {
-            console.log(`Menor de IDADE`)
-        }
-    }).catch( (err) => {
-        console.log(err.message)
-    })
-})).catch( (err) => {
+getAge('1996-12-05').then( (age) => checkAge(age))
+.then( (maior) => {
+    if (maior === true) {
+        console.log(`Maior de IDADE`)
+    } else {
+        console.log(`Menor de IDADE`)
+    }
+}).catch(err => {
     console.log(err.message)
 })
