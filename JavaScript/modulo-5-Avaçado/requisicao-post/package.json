@@ -1,0 +1,16 @@
+{
+  "name": "requisicao-post",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "json-server": "npx json-server --watch db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jason-server": "^3.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

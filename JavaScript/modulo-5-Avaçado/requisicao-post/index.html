@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            text-align: center;
+            background-color: #000;
+            color: #f00;
+            margin: auto;
+          }
+          input, textarea {
+            background-color: #575757b9;
+            border-radius: 30px;
+            text-indent: 20px;
+            margin: 10px auto;
+          }
+          button {
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bolder;
+            color: #f00;
+            background-color: #ffffff00;
+            border: 2px solid #f00;
+            margin-top: 10px;
+          }
+          button:hover {
+            background-color: #f00;
+            color: #000;
+            transform: scale(1.5,1.5);
+            transition: .9s;
+          }
+
+          .div {
+            border: 2px solid #f00;
+            border-radius: 20px;
+            padding: 5px;
+            color: #f00;
+          }
+    </style>
+    <title>Requisições POST com Javascript</title>
+  </head>
+  <body>
+    <main style="display: flex; gap: 4rem; margin: 1rem 2rem">
+      <form>
+        <h2>Escrever um artigo</h2>
+        <label for="title">Título:</label>
+        <br />
+        <input type="text" id="title" name="title" />
+        <br />
+        <label for="author">Autor:</label>
+        <br />
+        <input type="text" id="author" name="author" />
+        <br />
+        <label for="content">Conteúdo:</label>
+        <br />
+        <textarea id="content" name="content" cols="30" rows="10"></textarea>
+        <br />
+        <button>Salvar</button>
+      </form>
+      <div>
+        <h2>Artigos</h2>
+        <section id="articles"></section>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
