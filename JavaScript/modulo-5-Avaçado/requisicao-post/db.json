@@ -11,6 +11,12 @@
       "title": "Requisições POST com Javascript",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
       "author": "Isaac"
+    },
+    {
+      "title": "Primeira Requisição POST",
+      "author": "Caique Rodrigues",
+      "content": "lorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem",
+      "id": 3
     }
   ]
 }
