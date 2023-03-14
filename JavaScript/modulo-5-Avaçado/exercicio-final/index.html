@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Controle de Finanças</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Finanças Pessoais</h1>
+    <aside>
+        <div class="extrato">
+            <h6>Extrato</h6>
+            <div class="operacoes">
+                <fieldset class="operacao" id="resultado">
+                    <p style="display: flex;">Resultado Final: <span> </span></p>
+                </fieldset>
+            </div>
+        </div>
+    </aside>
+    <form action="http://localhost:3000/operations" method="post">
+
+    </form>
+        <div id="buttons">
+            <button id="entrada" class="btn">Entrada / Saída</button>
+            <button id="correcao" class="btn">Correção</button>
+            <button id="excluir" class="btn">Excluir <br> Lançamento</button>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

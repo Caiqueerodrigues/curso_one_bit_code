@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color1: #000;
+    --colo2: #f00;
+    --color3: #00f;
+    --bg-extrato: rgb(156, 150, 150);
+    --color-entrada: #0f0;
+}
+
+body {
+    background-color: #000;
+    text-transform: capitalize;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: #f00;
+    text-shadow: 2px 2px 15px var(--color3);
+}
+
+aside {
+    display: block;
+    float: right;
+    margin: 100px 20px 0 0;
+}
+.extrato {
+    border: 1px solid var(--colo2);
+    box-shadow: 2px 2px 15px var(--color3);
+    width: 300px;
+    min-height: 300px;
+    border-radius: 20px;
+    background-color: var(--bg-extrato);
+    color: #00f;
+    padding: 10px 14px;
+}
+.operacoes {
+    max-width: 99%;
+    max-height: 92%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+fieldset.operacao {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    height: min-content;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#resultado {
+    margin: 10px 0;
+    padding: 5px 30px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+h6 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.entrada {
+    display: flex;
+    font-size: .8rem;
+    color: var(--color-entrada);
+}
+.saida {
+    display: flex;
+    font-size: .8rem;
+    color: var(--colo2);
+}
+
+form {
+    min-height: 450px;
+    padding: 20px 40px;
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border-radius: 20px;
+    text-indent: 10px;
+    background-color: #fff;
+    height: 1.6rem;
+    margin: 10px;
+}
+label {
+    color: var(--colo2);
+}
+.success {
+    border: 2px solid var(--color-entrada);
+}
+.error {
+    border: 2px solid var(--colo2);
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: space-around;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    border: 2px solid var(--colo2);
+    background-color: transparent;
+    color: var(--color3);
+    place-items: center;
+    font-weight: bold;
+}
+#buttons:hover > :not(:hover){
+    transform: rotate(-15deg);
+    transition: .9s;
+}
+.btn:hover {
+    background-color: #f00;
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.2);
+}

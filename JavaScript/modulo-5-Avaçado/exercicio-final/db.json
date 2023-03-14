@@ -1,0 +1,32 @@
+{
+  "operations": [
+    {
+      "id": 1,
+      "nome": "empresa",
+      "valor": 2070,
+      "origem": "salário",
+      "operacao": "entrada"
+    },
+    {
+      "id": 2,
+      "nome": "caique",
+      "valor": -550,
+      "origem": "aluguel",
+      "operacao": "saida"
+    },
+    {
+      "nome": "Caique",
+      "origem": "forca",
+      "valor": "-123",
+      "operacao": "saida",
+      "id": 3
+    },
+    {
+      "nome": "Tainara",
+      "origem": "pagamento",
+      "valor": "1380",
+      "operacao": "entrada",
+      "id": 4
+    }
+  ]
+}
