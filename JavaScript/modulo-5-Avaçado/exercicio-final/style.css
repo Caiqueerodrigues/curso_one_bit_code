@@ -120,6 +120,7 @@ label {
     border: 2px solid var(--colo2);
     background-color: transparent;
     color: var(--color-entrada);
+    color: var(--color3);
     place-items: center;
     font-weight: bold;
 }
