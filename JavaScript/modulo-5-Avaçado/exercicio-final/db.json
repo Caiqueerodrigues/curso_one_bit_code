@@ -1,0 +1,53 @@
+{
+  "operations": [
+    {
+      "id": 1,
+      "nome": "caique",
+      "valor": 2070,
+      "origem": "salário",
+      "operacao": "entrada"
+    },
+    {
+      "id": 2,
+      "nome": "caique",
+      "valor": -550,
+      "origem": "aluguel",
+      "operacao": "saida"
+    },
+    {
+      "nome": "Caique",
+      "origem": "forca",
+      "valor": "-123",
+      "operacao": "saida",
+      "id": 3
+    },
+    {
+      "nome": "Tainara",
+      "origem": "pagamento",
+      "valor": "1380",
+      "operacao": "entrada",
+      "id": 4
+    },
+    {
+      "nome": "Tainara",
+      "origem": "forca",
+      "valor": "-412",
+      "operacao": "saida",
+      "id": 5
+    },
+    {
+      "nome": "Tainara",
+      "origem": "bico",
+      "valor": "2000",
+      "operacao": "entrada",
+      "id": 6
+    },
+    {
+      "nome": "Tainara",
+      "origem": "roupas",
+      "valor": "-120",
+      "operacao": "saida",
+      "id": 7
+    }
+  ]
+}
