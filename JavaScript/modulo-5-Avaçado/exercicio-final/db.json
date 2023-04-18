@@ -43,11 +43,25 @@
       "id": 6
     },
     {
+      "nome": "caique",
+      "origem": "perfume",
+      "valor": "-99",
+      "operacao": "saida",
+      "id": 8
+    },
+    {
       "nome": "Tainara",
-      "origem": "roupas",
+      "origem": "forca",
       "valor": "-120",
       "operacao": "saida",
-      "id": 7
+      "id": 9
+    },
+    {
+      "nome": "caique",
+      "origem": "comida",
+      "valor": "99",
+      "operacao": "entrada",
+      "id": 10
     }
   ]
 }

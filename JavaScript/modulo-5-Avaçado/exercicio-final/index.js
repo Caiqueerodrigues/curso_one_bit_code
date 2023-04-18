@@ -234,6 +234,7 @@ document.getElementById('correcao').addEventListener('click', (ev) => {
             })
             if(!modificacao) {
                 alert('[ERRO] Verifique o N° da operação informada!')
+                return
             }
             const labelName = document.createElement(`label`)
                 labelName.innerHTML= `<label for="name"> Nome: </lalbel>`
@@ -309,35 +310,84 @@ document.getElementById('correcao').addEventListener('click', (ev) => {
                 })
 
                 const altercaoFeita = {
-                    id: modificacao.id,
                     nome: inputNome.value,
-                    valor: inputValor.valule,
+                    valor: inputValor.value,
                     origem: inputOrigem.value,
                     operacao: escolha
                 }
 
-                // const resposta = await fetch(`http://localhost:3000/operations`, {
-                //     method: 'post',
-                //     headers: {
-                //         'Content-Type': 'application/json'
-                //     },
-                //     body: JSON.stringify(dadosOperacao)
-                // })
-
-                const salvarAlterecao = await fetch ('http://localhost:3000/operations', {
-                    method: 'patch',
+                //salvar alterações e o metodo PUT
+                const salvarAlterecao = await fetch (`http://localhost:3000/operations/${modificacao.id}`, {
+                    method: 'put',
                     headers: {
-                        'Content-Type': 'aplication/json'
+                        'Content-Type': 'application/json'
                     },
-                    //converter o obj para string
+                    // converter o obj para string
                     body: JSON.stringify(altercaoFeita)
                 })
+                form.textContent = ''
 
-                
+                document.querySelector(`.operacoes`).textContent = ''
+                getOperations()
             })
         }
     })
 
+})
+
+document.getElementById('excluir').addEventListener('click', (ev) => {
+    ev.preventDefault()
+    if(form.length != 0) {
+        form.removeChild(divPai)
+    }
+
+    const labelId = document.createElement('label')
+        labelId.innerHTML='<label for="id"> Qual N° da operação: </label>'
+    const inputId = document.createElement('input')
+        inputId.classList.add(`input`)
+        inputId.type='number'
+        inputId.placeholder= `EX: 4`
+    const btnConfirmar = document.createElement('button')
+        btnConfirmar.classList.add(`btn`)
+        btnConfirmar.textContent= `Confirmar`
+        btnConfirmar.style.width=`max-content`
+        btnConfirmar.style.alignSelf=`center`
+        btnConfirmar.style.margin='5px auto'
+
+    divPai = document.createElement('div')
+
+    divPai.append(labelId, inputId, document.createElement('br'), btnConfirmar)
+    form.append(divPai)
+
+    btnConfirmar.addEventListener('click', async (ev) => {
+        ev.preventDefault()
+        let exclusao = ''
+            const result = await fetch(`http://localhost:3000/operations`)
+            let operation = await result.json()
+            operation.forEach(element => {
+                if(element.id == inputId.value) {
+                    exclusao = element
+                    divPai.innerText = ''
+                }
+            })
+
+        let confirmacao =confirm(`
+            Deseja Realmente excluir a operação: ${exclusao.id},
+            Origem: ${exclusao.origem},
+            Nome de: ${exclusao.nome},
+            Valor de: ${exclusao.valor},
+            Operação de: ${exclusao.operacao},
+        `)
+        if(confirmacao) {
+            const excluir = await fetch (`http://localhost:3000/operations/${exclusao.id}`, {
+                    method: 'delete',
+                })
+                document.querySelector(`.operacoes`).textContent = ''
+                getOperations()
+        } else {
+            alert('Cancelado')
+        }
+    })
 })
 
 getOperations()
