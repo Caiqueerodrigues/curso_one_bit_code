@@ -41,8 +41,8 @@ const form = document.querySelector(`form`).addEventListener(`submit`, async (ev
     })
 
     const artigoSalvo = await resposta.json()
-    form.reset()
     create(artigoSalvo)
+    document.querySelector('form').reset()
 })
 
 getArticle()
