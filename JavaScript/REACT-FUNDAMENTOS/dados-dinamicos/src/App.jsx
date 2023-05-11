@@ -1,10 +1,14 @@
-export default function App() {
-  let text = 'React'
+import { Status } from "./Components/Status";
+import SubTitle from "./Components/SubTitle";
+import Title from "./Components/Title";
 
+export default function App() {
   return (
     <div className="app">
-      <h1> {text} é Incrível!</h1>
-      <h2>1 + 1 = {1+1}</h2>
+      <Title />
+      <SubTitle />
+      <Status />
     </div>
   )
 }
+
