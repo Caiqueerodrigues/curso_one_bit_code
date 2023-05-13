@@ -48,3 +48,12 @@ button {
     color: #fff;
     background-color: #000;
 }
+
+button:hover {
+    transition: 1s;
+    transform: scale(1.2);
+    border: 2px solid #000;
+    color: #000;
+    font-weight: bolder;
+    background-color: #fff;
+}
