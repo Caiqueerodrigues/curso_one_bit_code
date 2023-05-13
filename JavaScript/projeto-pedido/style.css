@@ -12,6 +12,7 @@
 }
 
 body {
+    max-height: 100vh;
     background-color: var(--bg-color);
     color: var(--color);
     text-align: center;
@@ -19,7 +20,7 @@ body {
 
 div {
     display: flex;
-    margin: calc(50%) auto 100px;
+    justify-content: center;
     padding: 10px;
 }
 h1 {
@@ -33,7 +34,7 @@ h1 {
     color: var(--color);
     border: 3px solid var(--color);
     border-radius: 10px;
-    background-color: transparent;
+    background-color: #000;
     box-shadow: 2px 2px 5px var(--color);
     margin: auto 20px;
 }
@@ -42,9 +43,6 @@ h1 {
     background-color: var(--color);
     color: var(--bg-color);
     transition: 1s;
-}
-#sim {
-    
 }
 
 @media(min-width: 426px) {
