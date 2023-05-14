@@ -7,7 +7,7 @@ export default function Card ({avatar, nome, bio, email, fone}) {
             className={styles.container}
         >
             <picture>
-                <img src={avatar} />
+                <img src={avatar} alt={`Foto de ${nome}`} />
             </picture>
             <h2>
                 {nome}
