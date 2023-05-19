@@ -1,7 +1,7 @@
 import styles from '../styles/card.module.css'
 import Button from './Button'
 
-export default function Card ({avatar, nome, bio, email, fone}) {
+export default function Card ({avatar, nome, bio, email, fone, linkGit, nomeG, linkLink, nomeL, linkTwitter, nomeT}) {
     return (
         <div
             className={styles.container}
@@ -26,16 +26,16 @@ export default function Card ({avatar, nome, bio, email, fone}) {
             </p>
             <hr />
             <Button 
-                link='https://github.com/Caiqueerodrigues'
-                nome='GitHub'
+                link= {linkGit}
+                nome={nomeG}
             />
             <Button 
-                link='https://www.linkedin.com/in/caique-rodrigues-a113ab249/'
-                nome='LinkedIn'
+                link={linkLink}
+                nome={nomeL}
             />
             <Button 
-                link='https://github.com/Caiqueerodrigues'
-                nome='Twitter'
+                link={linkTwitter}
+                nome={nomeT}
             />
         </div>
     )

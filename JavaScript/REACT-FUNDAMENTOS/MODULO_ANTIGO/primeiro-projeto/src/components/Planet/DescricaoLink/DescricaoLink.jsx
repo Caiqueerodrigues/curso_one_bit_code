@@ -1,4 +1,8 @@
 export default function DescricaoLink ({descricao, link}) {
+    if(!descricao) {
+        return null
+    }
+
     if(link) {
         return (
             <>

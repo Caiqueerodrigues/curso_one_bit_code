@@ -18,3 +18,8 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+a:hover {
+    color: aqua;
+    transition: .1s;
+}

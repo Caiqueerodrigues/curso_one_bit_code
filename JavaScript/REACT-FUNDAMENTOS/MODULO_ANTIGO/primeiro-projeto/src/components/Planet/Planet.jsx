@@ -1,7 +1,7 @@
 import DescricaoLink from './DescricaoLink/DescricaoLink'
 import './style.css'
 
-export default function Planet ({nome, descricao, link, img, click}) {
+export default function Planet ({nome, descricao, link, img, click, gray}) {
     return (
         <div onClick={() => click(nome)}>
             <h4>{nome}</h4>
@@ -10,7 +10,7 @@ export default function Planet ({nome, descricao, link, img, click}) {
                 link = {link}
             />
             <picture>
-                <img src={img} alt="Imagem do planeta" />
+                <img src={img} className={gray ? 'grayImg' : 'colorImg'} alt="Imagem do planeta" />
             </picture>
             <hr />
         </div>
