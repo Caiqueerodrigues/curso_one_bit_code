@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.card {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 50vw;
+    height: 60vh;
+    background-color: #ffffff82;
+    color: #f00;
+    border-radius: 50px;
+}
+
+.button {
+    width: 200px;
+    padding: 15px 30px;
+    margin: 50px;
+    border: 2px solid #f00;
+    border-radius: 50px;
+    font-size: 2rem;
+    color: #f00;
+    background-color: #000;
+}
+.button:hover {
+    transition: 1s;
+    color: #000;
+    background-color: #f00;
+    border-color: #000;
+}
+.button:active {
+    transform: scale(.5);
+    transition: .2s;
+}
+
+#visor {
+    background-color: #000;
+    width: 600px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50px;
+    color: #f00;
+    padding-top: 10%;
+    font-size: 3rem;
+}
+
+.divBtn {
+    width: 180px;
+    display: none;
+    padding: 15px 30px;
+    margin: 50px;
+    border: 2px solid #f00;
+    border-radius: 50px;
+    font-size: 2rem;
+    color: #f00;
+    background-color: transparent;
+    text-align: center;
+}
