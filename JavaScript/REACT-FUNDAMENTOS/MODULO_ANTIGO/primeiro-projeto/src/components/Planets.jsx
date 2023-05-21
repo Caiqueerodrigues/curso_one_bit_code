@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import Planet from "./Planet/Planet.jsx"
+import Planet from "./Planets/Planet.jsx"
 
 function click (nome) {
     console.log(`Um Click no planeta ${nome}`);
