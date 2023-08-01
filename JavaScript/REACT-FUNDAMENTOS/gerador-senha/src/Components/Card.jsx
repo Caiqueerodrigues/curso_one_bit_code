@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/card.module.css'
+import Input from './Input/Input'
 
 export default function Card() {
     let senha = ''
@@ -7,6 +8,8 @@ export default function Card() {
     let btnGerar = 'Gerar'
     let [btnCopiar, setBtnCopiar]= useState('Copiar')
     let [sizePassword, setSizePassword] = useState(12)
+    let [´showInput, setShowInput] = useState(false)
+
     function password() {
         if(btnCopiar !== 'Copiar') {
             document.getElementById('copy').style.display='inline-flex'
@@ -50,12 +53,7 @@ export default function Card() {
                 <h1>Gerador de Senhas Seguras</h1>
                 <div>
                     <label htmlFor="passwordSize">Tamanho: </label>
-                    <input type="number" 
-                        id="passwordSize" 
-                        min={1}
-                        value={sizePassword}
-                        onChange={(ev) => setSizePassword(ev.target.value)}
-                    />
+                    <Input sizePassword={sizePassword} setSizePassword={setSizePassword} />
                 </div>
                 <button
                     onClick={password}
