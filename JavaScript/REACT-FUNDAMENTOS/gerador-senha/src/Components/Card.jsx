@@ -8,7 +8,7 @@ export default function Card() {
     let btnGerar = 'Gerar'
     let [btnCopiar, setBtnCopiar]= useState('Copiar')
     let [sizePassword, setSizePassword] = useState(12)
-    let [´showInput, setShowInput] = useState(false)
+    let [showInput, setShowInput] = useState(false)
 
     function password() {
         if(btnCopiar !== 'Copiar') {
@@ -52,8 +52,19 @@ export default function Card() {
             >
                 <h1>Gerador de Senhas Seguras</h1>
                 <div>
-                    <label htmlFor="passwordSize">Tamanho: </label>
-                    <Input sizePassword={sizePassword} setSizePassword={setSizePassword} />
+                    <label htmlFor="showInput">Customizar o tamanho: </label>
+                    <input 
+                        type="checkbox" 
+                        id="showInput" 
+                        value={showInput}
+                        onChange={function () {setShowInput(currentState => !currentState), setSizePassword(12)}}
+                    />
+                    {showInput ? (
+                        <div>
+                            <label htmlFor="passwordSize">Tamanho: </label>
+                            <Input sizePassword={sizePassword} setSizePassword={setSizePassword} />
+                        </div>
+                    ) : null } 
                 </div>
                 <button
                     onClick={password}
