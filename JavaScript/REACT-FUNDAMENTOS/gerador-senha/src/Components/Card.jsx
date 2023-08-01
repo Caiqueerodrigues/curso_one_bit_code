@@ -6,6 +6,7 @@ export default function Card() {
     let [senhaMostrar, setSenhaMostrar] = useState('')
     let btnGerar = 'Gerar'
     let [btnCopiar, setBtnCopiar]= useState('Copiar')
+    let [sizePassword, setSizePassword] = useState(12)
     function password() {
         if(btnCopiar !== 'Copiar') {
             document.getElementById('copy').style.display='inline-flex'
@@ -14,7 +15,7 @@ export default function Card() {
             setBtnCopiar('Copiar')
         }
 
-        const caracteresEspeciais = "!@#$%^&*()_+{}[]<>?"
+        const caracteresEspeciais = "!@#$%^&*()_+{}[]<>?.,;:/"
         const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz'
         const numeros = "0123456789"
@@ -26,11 +27,10 @@ export default function Card() {
         senha += letrasMinusculas.charAt(Math.floor(Math.random() * letrasMinusculas.length))
         senha += numeros.charAt(Math.floor(Math.random() * numeros.length))
     
-        while (senha.length < 16) {
+        while (senha.length < sizePassword) {
             senha += caracteresPossiveis.charAt(Math.floor(Math.random() * caracteresPossiveis.length));
         }
         setSenhaMostrar(senha)
-        console.log(senha, `${senhaMostrar} Caracteres: ${senhaMostrar.length}`)
         return senhaMostrar;
     }
 
@@ -48,6 +48,15 @@ export default function Card() {
                 className={styles.card}
             >
                 <h1>Gerador de Senhas Seguras</h1>
+                <div>
+                    <label htmlFor="passwordSize">Tamanho: </label>
+                    <input type="number" 
+                        id="passwordSize" 
+                        min={1}
+                        value={sizePassword}
+                        onChange={(ev) => setSizePassword(ev.target.value)}
+                    />
+                </div>
                 <button
                     onClick={password}
                     className={styles.button}
