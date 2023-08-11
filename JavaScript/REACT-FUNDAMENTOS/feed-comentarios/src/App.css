@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #f00;
+  width: 100vw;
+  height: 100vh;
+}
+
+#submit {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+  color: #f00;
+  border: 2px solid #f00;
+  background-color: transparent;
+}
+#submit:hover {
+  color: #000;
+  border-color: #000;
+  background-color: #f00;
+  transition: 1s;
+}
+
