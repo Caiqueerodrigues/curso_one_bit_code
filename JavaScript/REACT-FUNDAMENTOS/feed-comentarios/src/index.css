@@ -1,6 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    background-color: #000;
+    color: #f00;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+#submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    color: #f00;
+    border: 2px solid #f00;
+    background-color: transparent;
+    text-align: center;
+}
+#submit:hover {
+    border-color: #000;
+    background-color: #f00;
+    transition: 1s;
+    color: #000;
+}
+
+
 .card {
     background-color: #3c3c3c74;
-    min-width: 400px;
+    max-width: 400px;
     min-height: 400px;
     height: fit-content;
     border-radius: 20px;
@@ -29,4 +64,16 @@ textarea {
     width: 100%;
     margin: 10px 0;
     border: 1px solid #f00;
+}
+#comments {
+    text-align: start;
+    color: #fff;
+}
+
+.py-10 {
+    padding: 10px 0;
+}
+.center {
+    text-align: center;
+    color: #f00;
 }
