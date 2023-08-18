@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Intel Core i9-11900k 3.5GHz 8-core Processor",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque ipsum debitis, reiciendis ipsa autem vero dolor explicabo itaque eum eos tenetur rem assumenda.",
+        "price": 499.99
+    },
+    {
+        "id": 2,
+        "name": "AMD Ryzen 9 5950X 3.4GHz 16-core Processor",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque ipsum debitis.",
+        "price": 749.99
+    },
+    {
+        "id": 3,
+        "name": "Corsair Vengeance LPX 32GB (2 x 16GB) DDDR4-320 Memory",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque.",
+        "price": 159.99
+    },
+    {
+        "id": 4,
+        "name": "Crucial Ballistix 64GB (4 x 16GB) DDR4-3600 Memory",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque ipsum debitis, reiciendis ipsa autem vero dolor explicabo itaque eum eos tenetur rem assumenda.",
+        "price": 639.99
+    },
+    {
+        "id": 5,
+        "name": "Fonte Atx",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque.",
+        "price": 159.99
+    },
+    {
+        "id": 6,
+        "name": "Placa mãe gigaByte",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolorem praesentium voluptate voluptatem dignissimos molestiae eaque ipsum debitis, reiciendis ipsa autem vero dolor explicabo itaque eum eos tenetur rem assumenda.",
+        "price": 639.99
+    }
+]
