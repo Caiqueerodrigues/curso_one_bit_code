@@ -2,6 +2,7 @@ import AdminHome from './pages/Admin/AdminHome';
 import RootLayout from './pages/Admin/RootLayout';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
+import Product from './pages/Product';
 import Products from './pages/Products';
 
 import { createBrowserRouter } from 'react-router-dom'
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: "products",
                 element: <Products />
+            },
+            {
+                path:"products/:productId",
+                element: <Product />
             },
             {
                 path: 'cart',

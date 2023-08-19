@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import products from '../dataBase.json'
+import Product from './Product'
 
 export default function Products() {
     return (
@@ -12,7 +14,11 @@ export default function Products() {
                         <li key={product.id}>
                             <h4>{ product.name }</h4>
                             <p>R$ { product.price }</p>
-                            <button>Ver</button>
+                            <Link to={`/products/${product.id}`}>
+                                <button>
+                                    Ver
+                                </button>
+                            </Link>
                             <button>Comprar</button>
                         </li>
                     ))}
