@@ -1,3 +1,5 @@
+import ProductBoundary from './errorBoundaries/productBoundary';
+import loadProduct from './loaders/products';
 import AdminHome from './pages/Admin/AdminHome';
 import RootLayout from './pages/Admin/RootLayout';
 import Cart from './pages/Cart';
@@ -21,7 +23,11 @@ const router = createBrowserRouter([
             },
             {
                 path:"products/:productId",
-                element: <Product />
+                element: <Product />,
+                //função que busca os dados OBRIGATÓRIO
+                loader: loadProduct,
+                //Verifica se há erros ou não
+                errorElement: <ProductBoundary />
             },
             {
                 path: 'cart',
