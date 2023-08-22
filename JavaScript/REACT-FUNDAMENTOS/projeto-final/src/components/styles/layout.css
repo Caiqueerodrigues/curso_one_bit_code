@@ -1,0 +1,29 @@
+.row {
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    color: #f00;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 2px double #f00;
+    background-color: inherit;
+    color: #f00;
+    font-weight: bolder;
+}
+
+
+.footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+.text {
+    color: #f00;
+    text-align: center;
+    padding: 2px;
+}

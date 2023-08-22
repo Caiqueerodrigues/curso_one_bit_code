@@ -1,0 +1,33 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+h1 { 
+    padding: 10px;
+}
+.visor {
+    border-radius: 20px;
+    width: 23%;
+    height: 150px;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+}
+.quantity {
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.big {
+    min-width: 49%;
+    max-height: 3rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
