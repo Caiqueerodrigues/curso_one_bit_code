@@ -1,7 +1,7 @@
 export default function Item () {
     return (
         <>
-            <h3>teste</h3>
+            <h3>show item</h3>
         </>
     )
 }

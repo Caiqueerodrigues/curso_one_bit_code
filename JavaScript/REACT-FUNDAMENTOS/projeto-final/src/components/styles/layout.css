@@ -2,7 +2,7 @@
     width: 98vw;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    padding: 15px;
     color: #f00;
 }
 
@@ -16,6 +16,25 @@ button {
     font-weight: bolder;
 }
 
+.logo {
+    margin: 5px 15px;
+}
+.tabs {
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 0;
+    border:none;
+    margin-bottom: -2px;
+}
+.active {
+    color: #f00;
+    border-bottom:2px solid #f00;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 .footer {
     width: 100vw;

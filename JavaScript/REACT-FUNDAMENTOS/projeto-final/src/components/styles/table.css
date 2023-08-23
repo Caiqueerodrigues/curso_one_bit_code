@@ -1,0 +1,15 @@
+table {
+    margin: 20px;
+    color: #fff;
+}
+
+thead > tr {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(32, 32, 32);
+    width: 95vw;
+    border-radius: 20px 20px 0 0;
+}
+th {
+    padding: 10px 15px;
+}

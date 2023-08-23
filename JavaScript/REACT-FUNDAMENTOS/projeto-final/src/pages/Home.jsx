@@ -1,8 +1,6 @@
-import { useLoaderData } from 'react-router-dom'
 import './style/home.css'
 
 export default function Home () {
-    let produtos = useLoaderData()
     return (
         <>
             <h1>Dashboard</h1>
@@ -12,7 +10,7 @@ export default function Home () {
                         Diversidade de Items
                     </p>
                     <p className='quantity'>
-                        2
+                        QUANTIDADE
                     </p>
                 </div>
                 <div className="visor">
@@ -20,7 +18,7 @@ export default function Home () {
                         Quantitade Total
                     </p>
                     <p className='quantity'>
-                        {produtos}
+                        QUANTIDADE P
                     </p>
                 </div>
                 <div className="visor">
