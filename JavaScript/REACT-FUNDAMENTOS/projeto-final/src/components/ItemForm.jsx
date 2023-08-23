@@ -14,10 +14,10 @@ export default function ItemForm({ itemToUpdate }) {
     };
 
     //verificando se vai atualizar ou criar um novo
-    const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem);
-    //vem do hook
-    const { AddItem, updateItem } = useStock();
-    const inputRef = useRef(null);
+    const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem)
+
+    const { AddItem, updateItem } = useStock()    //vem do hook
+    const inputRef = useRef(null) //autofocus no input
 
     //pegar o state atual e somar com o anterior nos imput's
     const handleChange = (ev) => {
@@ -33,17 +33,14 @@ export default function ItemForm({ itemToUpdate }) {
                 updateItem(itemToUpdate.id, item);
                 alert("Item atualizado com sucesso!");
         } else {
-            //stockitem vem da classe MODELs
-            const validItem = new StockItem(item);
-            //hook
-            AddItem(validItem);
-            //zerar os input´s
+            const validItem = new StockItem(item)//stockitem vem da classe MODELs
+            AddItem(validItem);//hook
             setItem(defaultItem);
-            alert("Item cadastrado com sucesso!");
+            alert("Item cadastrado com sucesso!") //zerar os input´s
         }
         } catch (err) {
             console.log(err.message);
-            alert("Ocorreu um erro." + err.message);
+            alert("Ocorreu um erro." + err.message)
         } finally {
             inputRef.current.focus();
         }
