@@ -3,8 +3,9 @@ table {
     color: #fff;
 }
 
-thead > tr {
+thead > tr, tbody tr {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     background-color: rgb(32, 32, 32);
     width: 95vw;
@@ -12,4 +13,42 @@ thead > tr {
 }
 th {
     padding: 10px 15px;
+    text-align: start;
+    width: 25%;
+}
+tbody tr {
+    height: 40px;
+    border-radius: 0;
+    color: rgb(32, 32, 32);
+    background-color: #fff;
+}
+td {
+    width: 25%;
+    text-align: start;
+    padding: 15px;
+}
+.itemId {
+    max-width: 60px;
+}
+
+.is-small {
+    text-align: center;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.is-primary {
+    border: 2px solid #17F00F;
+    color: #17F00F;
+    font-weight: bolder;
+}
+.small{
+    border: 2px solid rgb(0, 255, 238);
+    color: rgb(0, 255, 238);
+    font-weight: bolder;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 5px #6d6d6d;
 }

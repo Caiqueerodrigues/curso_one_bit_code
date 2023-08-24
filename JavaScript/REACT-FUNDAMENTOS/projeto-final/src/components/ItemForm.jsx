@@ -16,7 +16,7 @@ export default function ItemForm({ itemToUpdate }) {
     //verificando se vai atualizar ou criar um novo
     const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem)
 
-    const { AddItem, updateItem } = useStock()    //vem do hook
+    const { AddItem, updateItem, itemsLength } = useStock()    //vem do hook
     const inputRef = useRef(null) //autofocus no input
 
     //pegar o state atual e somar com o anterior nos imput's
@@ -33,8 +33,8 @@ export default function ItemForm({ itemToUpdate }) {
                 updateItem(itemToUpdate.id, item);
                 alert("Item atualizado com sucesso!");
         } else {
-            const validItem = new StockItem(item)//stockitem vem da classe MODELs
-            AddItem(validItem);//hook
+            const validItem = new StockItem(item, itemsLength)//stockitem vem da classe MODELs
+            AddItem(validItem) //FOI PASSADO PRA DENTRO DA MODEL PARA TER ID DINAMICO
             setItem(defaultItem);
             alert("Item cadastrado com sucesso!") //zerar os input´s
         }

@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoultDefault from "./layout/LayoutDefault";
 import Home from "./pages/Home";
 import Item from './pages/items/Item';
-import GetItems from "./loader/loadItems";
-import ItemBoundary from "./errorBoundary/ItemBoundary";
 import ItemsLayoutl from "./layout/ItemsLayoult";
 import ListItems from "./pages/items/ListItems";
 import AddItem from "./pages/items/AddItem";

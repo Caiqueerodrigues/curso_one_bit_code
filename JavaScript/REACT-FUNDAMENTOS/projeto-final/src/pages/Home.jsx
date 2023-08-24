@@ -1,6 +1,20 @@
+import useStock from '../hooks/useStock'
 import './style/home.css'
 
 export default function Home () {
+    const { items, itemsLength } = useStock()
+    let infos = {
+        totalQuantity: 0,
+        itemsAcabando: 0,
+        itemsRecente: 0
+    }
+
+    items.forEach(item => {
+        infos.totalQuantity += item.quantity
+        if(item.quantity < 10) {
+            infos.itemsAcabando ++
+        }
+    });
     return (
         <>
             <h1>Dashboard</h1>
@@ -10,7 +24,7 @@ export default function Home () {
                         Diversidade de Items
                     </p>
                     <p className='quantity'>
-                        QUANTIDADE
+                        { itemsLength }
                     </p>
                 </div>
                 <div className="visor">
@@ -18,7 +32,7 @@ export default function Home () {
                         Quantitade Total
                     </p>
                     <p className='quantity'>
-                        QUANTIDADE P
+                        { infos.totalQuantity }
                     </p>
                 </div>
                 <div className="visor">
@@ -26,15 +40,15 @@ export default function Home () {
                         Itens Recentes
                     </p>
                     <p className='quantity'>
-                        produtos
+                        { infos.itemsRecente }
                     </p>
                 </div>
                 <div className="visor">
                     <p>
-                        Itens Acabando
+                        Items Acabando
                     </p>
                     <p className='quantity'>
-                        produtos
+                        { infos.itemsAcabando }
                     </p>
                 </div>
             </div>

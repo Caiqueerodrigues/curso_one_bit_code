@@ -21,13 +21,14 @@ const [items, setItems] = useState(() => {
 
 const AddItem = (item) => {
     setItems(state => {
-        const updateItems = [item, ...state]
+        const updateItems = [...state, item]
         localStorage.setItem('react-stock', JSON.stringify(updateItems))
         return updateItems
     })
 }
 
 const stock = {
+    itemsLength: Number(items.length),
     items,
     AddItem
 }
