@@ -27,10 +27,33 @@ const AddItem = (item) => {
     })
 }
 
+const DeleteItem = (itemId) => {
+    setItems(state => {
+        const updateItems = state.filter(item => item.id !== itemId) //cria um array novo sem o item da verificação
+        localStorage.setItem('react-stock', JSON.stringify(updateItems))
+        return updateItems
+    })
+}
+
+const GetItem = (itemId) => {
+    return items.find(item => item.id === +itemId) //o + antes do item é a mesma coisa que Number(...)
+}
+const updateItem = (itemId, newAttributes) => {
+    setItems(currentState => {
+        const itemIndex = currentState.findIndex(item => item.id === +itemId)
+        const updateItems = [...currentState]
+        Object.assign(updateItem[itemIndex], newAttributes, {updatedAt: new Date().toLocaleDateString()})
+        localStorage.setItem('react-stock', JSON.stringify(updateItems))
+        return updateItems
+    })
+}
 const stock = {
     itemsLength: Number(items.length),
     items,
-    AddItem
+    AddItem,
+    DeleteItem,
+    GetItem,
+    updateItem,
 }
     return(
         <StockContext.Provider value={stock}>

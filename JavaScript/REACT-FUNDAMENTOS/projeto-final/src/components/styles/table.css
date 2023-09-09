@@ -30,7 +30,9 @@ td {
 .itemId {
     max-width: 60px;
 }
-
+.acoes {
+    min-width: 35%;
+}
 .is-small {
     text-align: center;
     padding: 5px 10px;

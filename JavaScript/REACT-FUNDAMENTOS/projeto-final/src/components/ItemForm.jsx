@@ -2,6 +2,7 @@ import './styles/form.css';
 import { useRef, useState } from "react";
 import useStock from "../hooks/useStock";
 import StockItem, { CATEGORIES } from '../models/StockItem';
+import { useNavigate } from 'react-router-dom';
 
 export default function ItemForm({ itemToUpdate }) {
     //reset do item sempre que concluir o que fizer UPDATE ou NOVO

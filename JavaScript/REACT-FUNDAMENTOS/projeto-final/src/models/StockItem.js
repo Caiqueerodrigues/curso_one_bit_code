@@ -10,7 +10,8 @@ export const CATEGORIES = [
 
 export default class StockItem {
     constructor({ name, description, quantity, price, category }, itemsLength) {
-        this.id = itemsLength,
+        this.id = Math.floor(Math.random() * 100)
+        // this.id = itemsLength, SE USAR ESTE, VAI DAR PROBLEMA QUANDO EXCLUIR UM ITEM
         this.name = name,
         this.description = description,
         this.quantity = Number(quantity),

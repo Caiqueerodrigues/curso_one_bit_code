@@ -1,10 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+import useStock from '../hooks/useStock'
 import './styles/button.css'
 
-export default function DelleteButton () {
-
+export default function DelleteButton ({ itemName, itemId }) {
+    const { DeleteItem } = useStock();
+    
     const handleDelete = () => {
-        if(confirm('Tem certeza que deseja excluir o item?')) {
-            
+    const navigate = useNavigate();
+        if(confirm(`Tem certeza que deseja excluir ${itemName}?`)) {
+            DeleteItem(itemId)
+            navigate("/items")
         }
     }
 

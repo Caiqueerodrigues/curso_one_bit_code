@@ -18,7 +18,7 @@ export default function ItemsTable() {
                     <th>Nome</th>
                     <th>Em Estoque</th>
                     <th>Categoria</th>
-                    <th>Ações</th>
+                    <th class="acoes">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,14 +28,17 @@ export default function ItemsTable() {
                         <td>{item.name}</td>
                         <td>{item.quantity} unid.</td>
                         <td>{item.category}</td>
-                        <td>
-                        <Link to={`/items/${item.id}`} className="button is-primary is-small">
-                            Ver
-                        </Link>
-                        <Link to={`/items/${item.id}/update`} className="button is-small">
-                            Atualizar
-                        </Link>
-                        <DelleteButton />
+                        <td class="acoes">
+                            <Link to={`/items/${item.id}`} className="button is-primary is-small">
+                                Ver
+                            </Link>
+                            <Link to={`/items/${item.id}/update`} className="button is-small">
+                                Atualizar
+                            </Link>
+                            <DelleteButton 
+                                itemName = {item.name}
+                                itemId = {item.id}
+                            />
                         </td>
                     </tr>
                 ))}

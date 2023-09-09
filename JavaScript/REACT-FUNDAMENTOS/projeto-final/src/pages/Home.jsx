@@ -6,14 +6,24 @@ export default function Home () {
     let infos = {
         totalQuantity: 0,
         itemsAcabando: 0,
-        itemsRecente: 0
+        itemsRecente: 0,
+        itemsRecentesNomes: [],
     }
-
+    
+    const today = new Date();
+    const limitDate = new Date();
+        limitDate.setDate(limitDate.getDate() - 10)
+    //const inventoryTotal = items.reduce((sum, item) => +sum + +item.quantity, 0) //descobrir a quantidade do inventario
     items.forEach(item => {
         infos.totalQuantity += item.quantity
         if(item.quantity < 10) {
             infos.itemsAcabando ++
         }
+        if(item.createdAt <= limitDate || item.updatedAt <= limitDate) {
+            infos.itemsRecente += item.quantity
+            infos.itemsRecentesNomes.push(item.name)
+        }
+
     });
     return (
         <>
