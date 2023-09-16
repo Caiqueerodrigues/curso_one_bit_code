@@ -18,7 +18,6 @@ async function getOperations() {
         }
         resultado.textContent = `R$ ${total},00`
     })
-   
 }
 
 async function mostrar(operation) {
