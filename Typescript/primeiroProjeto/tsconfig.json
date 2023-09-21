@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "outDir": "dist"  //pasta onde o arquivo compilado(js) será armazenado
+    }
+}
