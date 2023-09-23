@@ -11,7 +11,7 @@ function sendSpaceship(name:string, captain:string) {
     return spaceship
 }
 
-function accelerate(targetSpeed:number, spaceship:{name:string, speed:number}) {
+function accelerate(targetSpeed:number, spaceship:{name:string, speed?:number}) {
     if(spaceship.speed > targetSpeed) {
         alert(`Reduzindo a velocidade da ${spaceship.name} para ${targetSpeed}. . . `)
     } else if(spaceship.speed < targetSpeed) {
