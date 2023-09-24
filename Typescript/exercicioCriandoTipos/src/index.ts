@@ -109,9 +109,10 @@ function listPlanets() {
         Nome: ${planets[i-1].name}
         Coordenadas: ${planets[i-1].coordenadas}
         Situação: ${planets[i-1].situation}
-        Satélites: ${planets[i-1].satelites} \n`
+        Satélites: ${planets[i-1].satelites.length} 
+        ${planets[i-1].satelites}\n`
     }
-    alert(response)
+    return alert(response)
 }
 
 while(optionUser !== 6) {
