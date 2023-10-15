@@ -14,4 +14,10 @@ router.post('/', (req, res) => {
     res.status(200).send(req.body);
 })
 
+router.get('/:id', (req, res) => {
+    //dois pontos indica parametro
+    console.log(req.params.id)
+    res.send(`ID: ${req.params.id}`)
+})
+
 module.exports = router;
