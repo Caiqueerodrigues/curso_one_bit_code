@@ -8,4 +8,10 @@ router.get('/', (req, res) => {
     res.end();
 })
 
+router.post('/', (req, res) => { 
+    //o express diferencia a chamada pelo VERBO
+    console.log(req.body);
+    res.status(200).send(req.body);
+})
+
 module.exports = router;
