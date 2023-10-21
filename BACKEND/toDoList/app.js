@@ -1,3 +1,4 @@
+require('./config/dataBase.js');
 const express = require('express');
 const checkListsRouter = require("./src/routes/checkList.js");
 
