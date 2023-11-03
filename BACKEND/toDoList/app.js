@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')))
 //dizendo ao app que os arquivos estaticos estarão em PUBLIC
+app.use(express.urlencoded({extended: true})); //serve para pegar os valores do FORM e deixar disponivel para o BACK
 
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs') //mostrar o engine
