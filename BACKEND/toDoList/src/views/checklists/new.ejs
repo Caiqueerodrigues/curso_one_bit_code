@@ -7,7 +7,7 @@
             Nova Lista
         </h1>
 
-        <%- include('form', {method: 'POST', url: '/checklists', checklist: 'checklist'}) %>
+        <%- include('form', {url: '/checklists?_method=POST', checklist: 'checklist'}) %>
     </div>
 </section>
 

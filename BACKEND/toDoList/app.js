@@ -5,6 +5,8 @@ const path = require('path');
 
 const checkListsRouter = require("./src/routes/checkList.js");
 const rootRouter = require("./src/routes/index.js");
+const methodOverride = require('method-override');
+
 
 const app = express();
 
@@ -16,6 +18,8 @@ app.use(express.urlencoded({extended: true})); //serve para pegar os valores do 
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs') //mostrar o engine
 //serve para inserir dados mais facil
+
+app.use(methodOverride('_method')); //para as rotas PUT e DELETE (params é da própria lib)
 
 app.use('/checklists', checkListsRouter) //rota externa
 app.use('/', rootRouter) //rota externa
