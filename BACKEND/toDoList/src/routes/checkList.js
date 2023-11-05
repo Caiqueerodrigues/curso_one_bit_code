@@ -44,25 +44,42 @@ router.get('/:id', async (req, res) => {
     try {
         // res.status(200).json(checkList);
         let Checklist = await checklist.findById(id);
-        res.status(200).render('checklists/show',{ checklist: Checklist })
+        res.status(200).render('checklists/show',{ checklist: Checklist });
     } catch (error) {
         // res.status(422).json(error)
-        res.status(422).render('pages/error',{ error:'Erro ao exibir as listas de tarefas'})
+        res.status(422).render('pages/error',{ error:'Erro ao exibir as listas de tarefas'});
     }
 })
 
-router.put('/:id', async (req, res) => {
-    let { name } = req.body;
+router.get('/:id/edit', async (req, res) => {
     const id = req.params.id;
     
     try {
         //findByIdAndUpdate - encontra e já modifica
-        let checkList = await checklist.findByIdAndUpdate(id, { name }, {new: true});
+        let checkList = await checklist.findById(id);
         //objeto new: true é ára retornar o objeto modificado
         //sem ele, retorna antes de modificar
-        res.status(200).json(checkList);
+        res.status(200).render('checklists/edit', { checklist: checkList });
+    } catch (error) {
+        es.status(500).render('pages/error',{ error:'Erro ao exibir a página de edição de tarefas'});
+    }
+})
+
+router.put('/:id', async (req, res) => {
+    const id = req.params.id;
+    const { name } = req.body.checklist;
+    let check = await checklist.findById(id);
+
+    try {
+        await checklist.findByIdAndUpdate(id, { name }, { new: true });
+        //ele entra e já modifica
+        //new:True -> Retorna o obj já modificado
+        //sem ele retorna sem modificar
+        res.redirect('/checklists');
     } catch (er) {
-        res.status(422).json(e)
+        let errors = er.errors;
+        console.log(er.message)
+        res.status(422).render('checklists/edit', { checklist: { ...check, errors } })
     }
 })
 

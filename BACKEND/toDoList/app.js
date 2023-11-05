@@ -10,16 +10,18 @@ const methodOverride = require('method-override');
 
 const app = express();
 
+app.use(methodOverride('_method')); //para as rotas PUT e DELETE (params é da própria lib)
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')))
 //dizendo ao app que os arquivos estaticos estarão em PUBLIC
 app.use(express.urlencoded({extended: true})); //serve para pegar os valores do FORM e deixar disponivel para o BACK
 
+
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs') //mostrar o engine
 //serve para inserir dados mais facil
 
-app.use(methodOverride('_method')); //para as rotas PUT e DELETE (params é da própria lib)
 
 app.use('/checklists', checkListsRouter) //rota externa
 app.use('/', rootRouter) //rota externa
