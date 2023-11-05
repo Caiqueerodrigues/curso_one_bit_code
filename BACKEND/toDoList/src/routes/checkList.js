@@ -7,10 +7,11 @@ const checklist = require('../models/checklist.js');
 router.get('/', async (req, res) => { 
     //parametro da rota, vem na chamada
     try {
-        let checklists = await checklist.find({});
+        let checklists = await checklist.find({}).populate('tasks');
+        //populate tras as coisas relacionadas a este id
         // res.status(200).json(checklists);
         res.status(200).render('checklists/index',{ checklists: checklists})
-    } catch(e) {
+    } catch(error) {
         // res.status(500).json(e)
         res.status(500).render('pages/error',{ error:'Erro ao exibir as listas de tarefas'})
     }
@@ -24,7 +25,7 @@ router.post('/', async (req, res) => {
     try {
         await Checklist.save();
         res.redirect('/checklists'); //redireciona a rota
-    } catch(e) {
+    } catch(error) {
         res.status(422).render('pages/error', {error: 'Erro ao criar Checklist'})
     }
 })
@@ -33,8 +34,8 @@ router.get('/new', async (req, res) => {
     try {
         let checklist = new checklist();
         res.status(200).render('checklists/new', { checklist: checklist});
-    } catch(err) {
-        res.status(422).render('checklists/new', { checklist: {...checklist, err}});
+    } catch(error) {
+        res.status(422).render('checklists/new', { checklist: {...checklist, error}});
     }
 })
 
@@ -43,7 +44,8 @@ router.get('/:id', async (req, res) => {
     const id = req.params.id;
     try {
         // res.status(200).json(checkList);
-        let Checklist = await checklist.findById(id);
+        let Checklist = await checklist.findById(id).populate('tasks');
+        //populate tras as coisas relacionadas a este id
         res.status(200).render('checklists/show',{ checklist: Checklist });
     } catch (error) {
         // res.status(422).json(error)
@@ -76,22 +78,20 @@ router.put('/:id', async (req, res) => {
         //new:True -> Retorna o obj já modificado
         //sem ele retorna sem modificar
         res.redirect('/checklists');
-    } catch (er) {
-        let errors = er.errors;
-        console.log(er.message)
+    } catch (error) {
+        let errors = error.errors;
         res.status(422).render('checklists/edit', { checklist: { ...check, errors } })
     }
 })
 
 router.delete('/:id', async (req, res) => {
     const id = req.params.id;
-    
     try {
         //findByIdAndRemove - encontra e já remove
-        let CheckList = await checklist.findByIdAndRemove(id);
-        res.status(200).json(CheckList);
-    } catch (e) {
-        res.status(422).json(e)
+        await checklist.findByIdAndRemove(id);
+        res.redirect('/checklists');
+    } catch (error) {
+        res.status(500).render('pages/error', {error:'Erro ao deletar a trafera'})
     }
 })
 
