@@ -51,4 +51,15 @@ simpleRouter.delete('/:id', async (req, res) => {
     }
 })
 
+simpleRouter.put('/:id', async (req, res) => {
+    const id = req.params.id;
+    let Task = await task.findById(id);
+    try {
+        Task.set(req.body.task);
+        await Task.save();
+        res.status(200).json({ Task }) // tem que ser JSON, porque não vai gerar RELOAD na pagina
+    } catch (error) {
+        res.status(422).json({ task: { ...error.message }})
+    }
+})
 module.exports = { checklistdependent: checklistdependentRoute, simple: simpleRouter }
