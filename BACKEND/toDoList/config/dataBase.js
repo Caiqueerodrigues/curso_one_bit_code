@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const nameDb= 'to-do-list';
-const url = 'mongodb://localhost/';
+const user = 'caiquerodrigues';
+const password = 'um2tres4'
+const url = `mongodb+srv://${user}:${password}@cluster0.uvrcnay.mongodb.net/`;
 
 mongoose.connect(`${url}${nameDb}`,{useNewUrlParser: true, useUnifiedTopoLogy: true})
-    .then(() => console.log('Conectado ao DATABASE'))
     .catch((err) => console.log(`ERRO: ${err}`))
